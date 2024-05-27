@@ -1,0 +1,1072 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D6BC08E27F7438000FBDB02 /* window_capturer_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3D6BC08D27F7438000FBDB02 /* window_capturer_mac.mm */; };
+		3D6DAE4627D13AE6007917A2 /* system_time.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D6DAE4427D13AE6007917A2 /* system_time.h */; };
+		3D6DAE4727D13AE6007917A2 /* system_time.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3D6DAE4527D13AE6007917A2 /* system_time.cc */; };
+		3D6DAE4D27D14814007917A2 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6DAE4C27D14814007917A2 /* IOSurface.framework */; };
+		3D6DAE4F27D1481D007917A2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6DAE4E27D1481D007917A2 /* IOKit.framework */; };
+		3D6DAE5127D14825007917A2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6DAE5027D14825007917A2 /* AppKit.framework */; };
+		3D84EBE32811ED09007C89C6 /* content-paused.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D84EBE12811ED09007C89C6 /* content-paused.png */; };
+		3D84EBE42811ED09007C89C6 /* content-paused@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D84EBE22811ED09007C89C6 /* content-paused@2x.png */; };
+		3DD1C68A27D102440037E08B /* libmacShareAppStaticLib.a in Resources */ = {isa = PBXBuildFile; fileRef = 3DD1C67D27D0FA370037E08B /* libmacShareAppStaticLib.a */; };
+		3DD1DF5427D10F1D0037E08B /* webrtc_libyuv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1CD4E27D10F0B0037E08B /* webrtc_libyuv.h */; };
+		3DD1ED4A27D10F270037E08B /* full_screen_application_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC2A27D10F1A0037E08B /* full_screen_application_handler.h */; };
+		3DD1ED4D27D10F270037E08B /* desktop_capture_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC2D27D10F1A0037E08B /* desktop_capture_types.h */; };
+		3DD1ED4E27D10F270037E08B /* differ_vector_sse2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC2E27D10F1A0037E08B /* differ_vector_sse2.cc */; };
+		3DD1ED5027D10F270037E08B /* desktop_geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3027D10F1A0037E08B /* desktop_geometry.h */; };
+		3DD1ED5127D10F270037E08B /* use_app_window_capturer_mac.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3127D10F1A0037E08B /* use_app_window_capturer_mac.hpp */; };
+		3DD1ED5227D10F270037E08B /* desktop_capturer_wrapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC3227D10F1A0037E08B /* desktop_capturer_wrapper.cc */; };
+		3DD1ED5327D10F270037E08B /* desktop_capturer_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3327D10F1A0037E08B /* desktop_capturer_wrapper.h */; };
+		3DD1ED5427D10F270037E08B /* app_window_capturer_mac.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3427D10F1A0037E08B /* app_window_capturer_mac.hpp */; };
+		3DD1ED5527D10F270037E08B /* fake_desktop_capturer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC3527D10F1B0037E08B /* fake_desktop_capturer.cc */; };
+		3DD1ED5727D10F270037E08B /* desktop_capturer_differ_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3727D10F1B0037E08B /* desktop_capturer_differ_wrapper.h */; };
+		3DD1ED5927D10F270037E08B /* desktop_frame_generator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC3927D10F1B0037E08B /* desktop_frame_generator.cc */; };
+		3DD1ED5A27D10F270037E08B /* cropped_desktop_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3A27D10F1B0037E08B /* cropped_desktop_frame.h */; };
+		3DD1ED5D27D10F270037E08B /* cropped_desktop_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC3D27D10F1B0037E08B /* cropped_desktop_frame.cc */; };
+		3DD1ED5E27D10F270037E08B /* full_screen_window_detector.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC3E27D10F1B0037E08B /* full_screen_window_detector.h */; };
+		3DD1ED6027D10F270037E08B /* window_finder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC4027D10F1B0037E08B /* window_finder.h */; };
+		3DD1ED6127D10F270037E08B /* desktop_frame_rotation.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC4127D10F1B0037E08B /* desktop_frame_rotation.cc */; };
+		3DD1ED6327D10F270037E08B /* test_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC4327D10F1B0037E08B /* test_utils.h */; };
+		3DD1ED6627D10F270037E08B /* desktop_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC4627D10F1B0037E08B /* desktop_frame.cc */; };
+		3DD1ED6727D10F270037E08B /* differ_block.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC4727D10F1B0037E08B /* differ_block.h */; };
+		3DD1ED6827D10F270037E08B /* desktop_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC4827D10F1B0037E08B /* desktop_frame.h */; };
+		3DD1ED6E27D10F270037E08B /* desktop_capture_metrics_helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC4E27D10F1B0037E08B /* desktop_capture_metrics_helper.cc */; };
+		3DD1ED6F27D10F270037E08B /* use_app_window_capturer_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC4F27D10F1B0037E08B /* use_app_window_capturer_mac.mm */; };
+		3DD1ED7027D10F270037E08B /* desktop_and_cursor_composer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC5027D10F1B0037E08B /* desktop_and_cursor_composer.h */; };
+		3DD1ED7127D10F270037E08B /* mouse_cursor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5127D10F1B0037E08B /* mouse_cursor.cc */; };
+		3DD1ED7227D10F270037E08B /* screen_capture_frame_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC5227D10F1B0037E08B /* screen_capture_frame_queue.h */; };
+		3DD1ED7627D10F270037E08B /* resolution_tracker.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5627D10F1B0037E08B /* resolution_tracker.cc */; };
+		3DD1ED7727D10F270037E08B /* screen_drawer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC5727D10F1B0037E08B /* screen_drawer.h */; };
+		3DD1ED7827D10F270037E08B /* desktop_and_cursor_composer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5827D10F1B0037E08B /* desktop_and_cursor_composer.cc */; };
+		3DD1ED7927D10F270037E08B /* mouse_cursor_monitor_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5927D10F1B0037E08B /* mouse_cursor_monitor_mac.mm */; };
+		3DD1ED7A27D10F270037E08B /* screen_drawer_lock_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5A27D10F1B0037E08B /* screen_drawer_lock_posix.cc */; };
+		3DD1ED7C27D10F270037E08B /* resolution_tracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC5C27D10F1B0037E08B /* resolution_tracker.h */; };
+		3DD1ED7D27D10F270037E08B /* screen_capturer_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC5D27D10F1B0037E08B /* screen_capturer_helper.h */; };
+		3DD1ED7E27D10F270037E08B /* blank_detector_desktop_capturer_wrapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC5E27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.cc */; };
+		3DD1ED8027D10F270037E08B /* full_screen_window_detector.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC6027D10F1B0037E08B /* full_screen_window_detector.cc */; };
+		3DD1ED8127D10F270037E08B /* desktop_frame_rotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC6127D10F1B0037E08B /* desktop_frame_rotation.h */; };
+		3DD1ED8327D10F270037E08B /* shared_desktop_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC6327D10F1B0037E08B /* shared_desktop_frame.cc */; };
+		3DD1ED8627D10F270037E08B /* window_finder_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC6627D10F1B0037E08B /* window_finder_mac.h */; };
+		3DD1ED8727D10F270037E08B /* fallback_desktop_capturer_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC6727D10F1B0037E08B /* fallback_desktop_capturer_wrapper.h */; };
+		3DD1ED8927D10F270037E08B /* desktop_capturer_differ_wrapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC6927D10F1B0037E08B /* desktop_capturer_differ_wrapper.cc */; };
+		3DD1ED8A27D10F270037E08B /* fake_desktop_capturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC6A27D10F1B0037E08B /* fake_desktop_capturer.h */; };
+		3DD1ED8B27D10F270037E08B /* screen_capturer_helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC6B27D10F1B0037E08B /* screen_capturer_helper.cc */; };
+		3DD1ED8C27D10F270037E08B /* fallback_desktop_capturer_wrapper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC6C27D10F1B0037E08B /* fallback_desktop_capturer_wrapper.cc */; };
+		3DD1ED8E27D10F270037E08B /* screen_capturer_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC6F27D10F1B0037E08B /* screen_capturer_mac.h */; };
+		3DD1ED8F27D10F270037E08B /* desktop_frame_cgimage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7027D10F1B0037E08B /* desktop_frame_cgimage.mm */; };
+		3DD1ED9027D10F270037E08B /* full_screen_mac_application_handler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7127D10F1B0037E08B /* full_screen_mac_application_handler.h */; };
+		3DD1ED9127D10F270037E08B /* full_screen_mac_application_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7227D10F1B0037E08B /* full_screen_mac_application_handler.cc */; };
+		3DD1ED9227D10F270037E08B /* window_list_utils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7327D10F1B0037E08B /* window_list_utils.cc */; };
+		3DD1ED9327D10F270037E08B /* desktop_configuration_monitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7427D10F1B0037E08B /* desktop_configuration_monitor.h */; };
+		3DD1ED9427D10F270037E08B /* desktop_configuration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7527D10F1B0037E08B /* desktop_configuration.mm */; };
+		3DD1ED9527D10F270037E08B /* desktop_frame_iosurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7627D10F1B0037E08B /* desktop_frame_iosurface.h */; };
+		3DD1ED9627D10F270037E08B /* desktop_frame_iosurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7727D10F1B0037E08B /* desktop_frame_iosurface.mm */; };
+		3DD1ED9727D10F270037E08B /* desktop_configuration_monitor.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7827D10F1B0037E08B /* desktop_configuration_monitor.cc */; };
+		3DD1ED9827D10F270037E08B /* desktop_frame_provider.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7927D10F1B0037E08B /* desktop_frame_provider.h */; };
+		3DD1ED9927D10F270037E08B /* desktop_configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7A27D10F1B0037E08B /* desktop_configuration.h */; };
+		3DD1ED9A27D10F270037E08B /* desktop_frame_provider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7B27D10F1B0037E08B /* desktop_frame_provider.mm */; };
+		3DD1ED9B27D10F270037E08B /* screen_capturer_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7C27D10F1B0037E08B /* screen_capturer_mac.mm */; };
+		3DD1ED9C27D10F270037E08B /* desktop_frame_cgimage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7D27D10F1B0037E08B /* desktop_frame_cgimage.h */; };
+		3DD1ED9D27D10F270037E08B /* window_list_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC7E27D10F1B0037E08B /* window_list_utils.h */; };
+		3DD1ED9E27D10F270037E08B /* desktop_region.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC7F27D10F1B0037E08B /* desktop_region.cc */; };
+		3DD1ED9F27D10F270037E08B /* desktop_region.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8027D10F1B0037E08B /* desktop_region.h */; };
+		3DD1EDA027D10F270037E08B /* screen_capturer_darwin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC8127D10F1B0037E08B /* screen_capturer_darwin.mm */; };
+		3DD1EDA127D10F270037E08B /* desktop_geometry.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC8227D10F1B0037E08B /* desktop_geometry.cc */; };
+		3DD1EDA527D10F270037E08B /* cropping_window_capturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8627D10F1B0037E08B /* cropping_window_capturer.h */; };
+		3DD1EDA627D10F270037E08B /* full_screen_application_handler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC8727D10F1B0037E08B /* full_screen_application_handler.cc */; };
+		3DD1EDA727D10F270037E08B /* shared_desktop_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8827D10F1B0037E08B /* shared_desktop_frame.h */; };
+		3DD1EDA827D10F270037E08B /* mouse_cursor_monitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8927D10F1B0037E08B /* mouse_cursor_monitor.h */; };
+		3DD1EDA927D10F270037E08B /* desktop_capturer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC8A27D10F1B0037E08B /* desktop_capturer.cc */; };
+		3DD1EDAA27D10F270037E08B /* differ_vector_sse2.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8B27D10F1B0037E08B /* differ_vector_sse2.h */; };
+		3DD1EDAB27D10F270037E08B /* desktop_capture_metrics_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC8C27D10F1B0037E08B /* desktop_capture_metrics_helper.h */; };
+		3DD1EDAD27D10F270037E08B /* differ_block.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC8E27D10F1B0037E08B /* differ_block.cc */; };
+		3DD1EDB327D10F270037E08B /* window_finder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC9427D10F1B0037E08B /* window_finder.cc */; };
+		3DD1EDB427D10F270037E08B /* test_utils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC9527D10F1B0037E08B /* test_utils.cc */; };
+		3DD1EDB527D10F270037E08B /* desktop_frame_generator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC9627D10F1B0037E08B /* desktop_frame_generator.h */; };
+		3DD1EDB727D10F270037E08B /* desktop_capture_options.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC9827D10F1B0037E08B /* desktop_capture_options.h */; };
+		3DD1EDB927D10F270037E08B /* blank_detector_desktop_capturer_wrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC9A27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.h */; };
+		3DD1EDBA27D10F270037E08B /* screen_drawer_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC9B27D10F1B0037E08B /* screen_drawer_mac.cc */; };
+		3DD1EDBB27D10F270037E08B /* mouse_cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DC9C27D10F1B0037E08B /* mouse_cursor.h */; };
+		3DD1EDBD27D10F270037E08B /* window_finder_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DC9E27D10F1B0037E08B /* window_finder_mac.mm */; };
+		3DD1EDC027D10F270037E08B /* cropping_window_capturer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCA127D10F1B0037E08B /* cropping_window_capturer.cc */; };
+		3DD1EDC227D10F270037E08B /* app_window_capturer_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCA327D10F1B0037E08B /* app_window_capturer_mac.mm */; };
+		3DD1EDC327D10F270037E08B /* desktop_capturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DCA427D10F1B0037E08B /* desktop_capturer.h */; };
+		3DD1EDC527D10F270037E08B /* screen_drawer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCA627D10F1B0037E08B /* screen_drawer.cc */; };
+		3DD1EDC627D10F270037E08B /* screen_capturer_null.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCA727D10F1B0037E08B /* screen_capturer_null.cc */; };
+		3DD1EDC727D10F270037E08B /* desktop_capture_options.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCA827D10F1B0037E08B /* desktop_capture_options.cc */; };
+		3DD1EDCA27D10F270037E08B /* shared_memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DCAB27D10F1B0037E08B /* shared_memory.h */; };
+		3DD1EDCB27D10F270037E08B /* shared_memory.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCAC27D10F1B0037E08B /* shared_memory.cc */; };
+		3DD1EDCD27D10F270037E08B /* screen_drawer_lock_posix.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DCAE27D10F1B0037E08B /* screen_drawer_lock_posix.h */; };
+		3DD1EDCF27D10F270037E08B /* rgba_color.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1DCB027D10F1B0037E08B /* rgba_color.cc */; };
+		3DD1EDD027D10F270037E08B /* rgba_color.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DCB127D10F1B0037E08B /* rgba_color.h */; };
+		3DD1EDD227D10F270037E08B /* SaveFileForCGImage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1DCB327D10F1B0037E08B /* SaveFileForCGImage.hpp */; };
+		3DD1EDD527D110B30037E08B /* SaveFileForCGImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EDD427D110B20037E08B /* SaveFileForCGImage.cpp */; };
+		3DD1EDDA27D1133B0037E08B /* color_space.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDD827D1133B0037E08B /* color_space.h */; };
+		3DD1EDDB27D1133B0037E08B /* color_space.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EDD927D1133B0037E08B /* color_space.cc */; };
+		3DD1EDDE27D113610037E08B /* video_frame.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EDDC27D113610037E08B /* video_frame.cc */; };
+		3DD1EDDF27D113610037E08B /* video_frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDDD27D113610037E08B /* video_frame.h */; };
+		3DD1EDF827D113900037E08B /* libyuv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE127D113900037E08B /* libyuv.h */; };
+		3DD1EDF927D113900037E08B /* scale_row.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE327D113900037E08B /* scale_row.h */; };
+		3DD1EDFA27D113900037E08B /* scale.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE427D113900037E08B /* scale.h */; };
+		3DD1EDFB27D113900037E08B /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE527D113900037E08B /* version.h */; };
+		3DD1EDFC27D113900037E08B /* cpu_id.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE627D113900037E08B /* cpu_id.h */; };
+		3DD1EDFD27D113900037E08B /* video_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE727D113900037E08B /* video_common.h */; };
+		3DD1EDFE27D113900037E08B /* compare_row.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE827D113900037E08B /* compare_row.h */; };
+		3DD1EDFF27D113900037E08B /* mjpeg_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDE927D113900037E08B /* mjpeg_decoder.h */; };
+		3DD1EE0027D113900037E08B /* rotate_row.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDEA27D113900037E08B /* rotate_row.h */; };
+		3DD1EE0127D113900037E08B /* planar_functions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDEB27D113900037E08B /* planar_functions.h */; };
+		3DD1EE0227D113900037E08B /* scale_argb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDEC27D113900037E08B /* scale_argb.h */; };
+		3DD1EE0327D113900037E08B /* compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDED27D113900037E08B /* compare.h */; };
+		3DD1EE0427D113900037E08B /* convert_argb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDEE27D113900037E08B /* convert_argb.h */; };
+		3DD1EE0527D113900037E08B /* rotate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDEF27D113900037E08B /* rotate.h */; };
+		3DD1EE0627D113900037E08B /* convert_from_argb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF027D113900037E08B /* convert_from_argb.h */; };
+		3DD1EE0727D113900037E08B /* basic_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF127D113900037E08B /* basic_types.h */; };
+		3DD1EE0827D113900037E08B /* scale_uv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF227D113900037E08B /* scale_uv.h */; };
+		3DD1EE0927D113900037E08B /* convert_from.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF327D113900037E08B /* convert_from.h */; };
+		3DD1EE0A27D113900037E08B /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF427D113900037E08B /* convert.h */; };
+		3DD1EE0B27D113900037E08B /* rotate_argb.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF527D113900037E08B /* rotate_argb.h */; };
+		3DD1EE0C27D113900037E08B /* macros_msa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF627D113900037E08B /* macros_msa.h */; };
+		3DD1EE0D27D113900037E08B /* row.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EDF727D113900037E08B /* row.h */; };
+		3DD1EE0F27D113C00037E08B /* scoped_refptr.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE0E27D113C00037E08B /* scoped_refptr.h */; };
+		3DD1EE1227D1140C0037E08B /* aligned_malloc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1027D1140C0037E08B /* aligned_malloc.cc */; };
+		3DD1EE1327D1140C0037E08B /* aligned_malloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE1127D1140C0037E08B /* aligned_malloc.h */; };
+		3DD1EE1727D1149D0037E08B /* video_frame_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE1427D1149D0037E08B /* video_frame_buffer.h */; };
+		3DD1EE1827D1149D0037E08B /* video_rotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE1527D1149D0037E08B /* video_rotation.h */; };
+		3DD1EE1B27D114A80037E08B /* yield_policy.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1A27D114A80037E08B /* yield_policy.cc */; };
+		3DD1EE2527D115270037E08B /* random.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1C27D115270037E08B /* random.cc */; };
+		3DD1EE2627D115270037E08B /* metrics.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1D27D115270037E08B /* metrics.cc */; };
+		3DD1EE2727D115270037E08B /* event.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1E27D115270037E08B /* event.cc */; };
+		3DD1EE2827D115270037E08B /* sequence_checker_internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1F27D115270037E08B /* sequence_checker_internal.cc */; };
+		3DD1EE2927D115270037E08B /* task_queue_base.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE2027D115270037E08B /* task_queue_base.cc */; };
+		3DD1EE2A27D115270037E08B /* event_tracer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE2127D115270037E08B /* event_tracer.cc */; };
+		3DD1EE2B27D115270037E08B /* differ_vector_sse2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE2227D115270037E08B /* differ_vector_sse2.cc */; };
+		3DD1EE2C27D115270037E08B /* string_encode.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE2327D115270037E08B /* string_encode.cc */; };
+		3DD1EE2D27D115270037E08B /* platform_thread.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE2427D115270037E08B /* platform_thread.cc */; };
+		3DD1EE2F27D115520037E08B /* trace_event.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE2E27D115520037E08B /* trace_event.h */; };
+		3DD1EE3727D115F10037E08B /* string_builder.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3027D115F00037E08B /* string_builder.cc */; };
+		3DD1EE3927D115F10037E08B /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3227D115F00037E08B /* logging.cc */; };
+		3DD1EE3A27D115F10037E08B /* platform_thread_types.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3327D115F10037E08B /* platform_thread_types.cc */; };
+		3DD1EE3B27D115F10037E08B /* checks.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3427D115F10037E08B /* checks.cc */; };
+		3DD1EE3C27D115F10037E08B /* time_utils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3527D115F10037E08B /* time_utils.cc */; };
+		3DD1EE3D27D115F10037E08B /* string_utils.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE3627D115F10037E08B /* string_utils.cc */; };
+		3DE3DC5727D28869005CB845 /* i420_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3DC5527D28869005CB845 /* i420_buffer.cc */; };
+		3DE3DC5827D28869005CB845 /* i420_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3DC5627D28869005CB845 /* i420_buffer.h */; };
+		3DE3DC5B27D2AAF8005CB845 /* video_frame_buffer.cc in Headers */ = {isa = PBXBuildFile; fileRef = 3DD1EE1627D1149D0037E08B /* video_frame_buffer.cc */; };
+		3DE3DC5C27D2AD55005CB845 /* i420_buffer.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3DC5627D28869005CB845 /* i420_buffer.h */; };
+		3DE3DC5D27D2AE30005CB845 /* video_frame_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1627D1149D0037E08B /* video_frame_buffer.cc */; };
+		3DE3DC5E27D2AE30005CB845 /* video_frame_buffer.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DD1EE1427D1149D0037E08B /* video_frame_buffer.h */; };
+		3DE3DC6127D2AFDD005CB845 /* nv12_buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE3DC5F27D2AFDD005CB845 /* nv12_buffer.h */; };
+		3DE3DC6227D2AFDD005CB845 /* nv12_buffer.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3DE3DC6027D2AFDD005CB845 /* nv12_buffer.cc */; };
+		3DFCF8F427D6211B00C391C4 /* MacShareAppStaticLibClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DFCF8F227D6211B00C391C4 /* MacShareAppStaticLibClass.cpp */; };
+		3DFCF8F527D6211B00C391C4 /* MacShareAppStaticLibClass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3DFCF8F327D6211B00C391C4 /* MacShareAppStaticLibClass.hpp */; };
+		D1FCACE02A05E7BF007C3104 /* libmacShareAppStaticLib.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DD1C67D27D0FA370037E08B /* libmacShareAppStaticLib.a */; };
+		D7932F4D2BC7F29A00CA8FF5 /* libyuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C7200729FBE293004AA92B /* libyuv.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1FCACDF2A05E6F7007C3104 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/../../lib";
+			dstSubfolderSpec = 0;
+			files = (
+				D1FCACE02A05E7BF007C3104 /* libmacShareAppStaticLib.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3D6BC08D27F7438000FBDB02 /* window_capturer_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = window_capturer_mac.mm; sourceTree = "<group>"; };
+		3D6DAE4327D12C87007917A2 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		3D6DAE4427D13AE6007917A2 /* system_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = system_time.h; path = rtc_base/system_time.h; sourceTree = "<group>"; };
+		3D6DAE4527D13AE6007917A2 /* system_time.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = system_time.cc; path = rtc_base/system_time.cc; sourceTree = "<group>"; };
+		3D6DAE4C27D14814007917A2 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		3D6DAE4E27D1481D007917A2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		3D6DAE5027D14825007917A2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3D84EBE12811ED09007C89C6 /* content-paused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content-paused.png"; sourceTree = "<group>"; };
+		3D84EBE22811ED09007C89C6 /* content-paused@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "content-paused@2x.png"; sourceTree = "<group>"; };
+		3DD1C67D27D0FA370037E08B /* libmacShareAppStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmacShareAppStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD1CD4C27D10F0B0037E08B /* webrtc_libyuv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = webrtc_libyuv.cc; sourceTree = "<group>"; };
+		3DD1CD4E27D10F0B0037E08B /* webrtc_libyuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webrtc_libyuv.h; sourceTree = "<group>"; };
+		3DD1DC2A27D10F1A0037E08B /* full_screen_application_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = full_screen_application_handler.h; sourceTree = "<group>"; };
+		3DD1DC2D27D10F1A0037E08B /* desktop_capture_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capture_types.h; sourceTree = "<group>"; };
+		3DD1DC2E27D10F1A0037E08B /* differ_vector_sse2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = differ_vector_sse2.cc; sourceTree = "<group>"; };
+		3DD1DC3027D10F1A0037E08B /* desktop_geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_geometry.h; sourceTree = "<group>"; };
+		3DD1DC3127D10F1A0037E08B /* use_app_window_capturer_mac.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = use_app_window_capturer_mac.hpp; sourceTree = "<group>"; };
+		3DD1DC3227D10F1A0037E08B /* desktop_capturer_wrapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_capturer_wrapper.cc; sourceTree = "<group>"; };
+		3DD1DC3327D10F1A0037E08B /* desktop_capturer_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capturer_wrapper.h; sourceTree = "<group>"; };
+		3DD1DC3427D10F1A0037E08B /* app_window_capturer_mac.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = app_window_capturer_mac.hpp; sourceTree = "<group>"; };
+		3DD1DC3527D10F1B0037E08B /* fake_desktop_capturer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fake_desktop_capturer.cc; sourceTree = "<group>"; };
+		3DD1DC3727D10F1B0037E08B /* desktop_capturer_differ_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capturer_differ_wrapper.h; sourceTree = "<group>"; };
+		3DD1DC3927D10F1B0037E08B /* desktop_frame_generator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_frame_generator.cc; sourceTree = "<group>"; };
+		3DD1DC3A27D10F1B0037E08B /* cropped_desktop_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cropped_desktop_frame.h; sourceTree = "<group>"; };
+		3DD1DC3D27D10F1B0037E08B /* cropped_desktop_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cropped_desktop_frame.cc; sourceTree = "<group>"; };
+		3DD1DC3E27D10F1B0037E08B /* full_screen_window_detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = full_screen_window_detector.h; sourceTree = "<group>"; };
+		3DD1DC4027D10F1B0037E08B /* window_finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window_finder.h; sourceTree = "<group>"; };
+		3DD1DC4127D10F1B0037E08B /* desktop_frame_rotation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_frame_rotation.cc; sourceTree = "<group>"; };
+		3DD1DC4327D10F1B0037E08B /* test_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_utils.h; sourceTree = "<group>"; };
+		3DD1DC4627D10F1B0037E08B /* desktop_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_frame.cc; sourceTree = "<group>"; };
+		3DD1DC4727D10F1B0037E08B /* differ_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = differ_block.h; sourceTree = "<group>"; };
+		3DD1DC4827D10F1B0037E08B /* desktop_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame.h; sourceTree = "<group>"; };
+		3DD1DC4E27D10F1B0037E08B /* desktop_capture_metrics_helper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_capture_metrics_helper.cc; sourceTree = "<group>"; };
+		3DD1DC4F27D10F1B0037E08B /* use_app_window_capturer_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = use_app_window_capturer_mac.mm; sourceTree = "<group>"; };
+		3DD1DC5027D10F1B0037E08B /* desktop_and_cursor_composer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_and_cursor_composer.h; sourceTree = "<group>"; };
+		3DD1DC5127D10F1B0037E08B /* mouse_cursor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mouse_cursor.cc; sourceTree = "<group>"; };
+		3DD1DC5227D10F1B0037E08B /* screen_capture_frame_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen_capture_frame_queue.h; sourceTree = "<group>"; };
+		3DD1DC5627D10F1B0037E08B /* resolution_tracker.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resolution_tracker.cc; sourceTree = "<group>"; };
+		3DD1DC5727D10F1B0037E08B /* screen_drawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen_drawer.h; sourceTree = "<group>"; };
+		3DD1DC5827D10F1B0037E08B /* desktop_and_cursor_composer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_and_cursor_composer.cc; sourceTree = "<group>"; };
+		3DD1DC5927D10F1B0037E08B /* mouse_cursor_monitor_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mouse_cursor_monitor_mac.mm; sourceTree = "<group>"; };
+		3DD1DC5A27D10F1B0037E08B /* screen_drawer_lock_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen_drawer_lock_posix.cc; sourceTree = "<group>"; };
+		3DD1DC5C27D10F1B0037E08B /* resolution_tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resolution_tracker.h; sourceTree = "<group>"; };
+		3DD1DC5D27D10F1B0037E08B /* screen_capturer_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen_capturer_helper.h; sourceTree = "<group>"; };
+		3DD1DC5E27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = blank_detector_desktop_capturer_wrapper.cc; sourceTree = "<group>"; };
+		3DD1DC6027D10F1B0037E08B /* full_screen_window_detector.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = full_screen_window_detector.cc; sourceTree = "<group>"; };
+		3DD1DC6127D10F1B0037E08B /* desktop_frame_rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame_rotation.h; sourceTree = "<group>"; };
+		3DD1DC6327D10F1B0037E08B /* shared_desktop_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shared_desktop_frame.cc; sourceTree = "<group>"; };
+		3DD1DC6627D10F1B0037E08B /* window_finder_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window_finder_mac.h; sourceTree = "<group>"; };
+		3DD1DC6727D10F1B0037E08B /* fallback_desktop_capturer_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fallback_desktop_capturer_wrapper.h; sourceTree = "<group>"; };
+		3DD1DC6927D10F1B0037E08B /* desktop_capturer_differ_wrapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_capturer_differ_wrapper.cc; sourceTree = "<group>"; };
+		3DD1DC6A27D10F1B0037E08B /* fake_desktop_capturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fake_desktop_capturer.h; sourceTree = "<group>"; };
+		3DD1DC6B27D10F1B0037E08B /* screen_capturer_helper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen_capturer_helper.cc; sourceTree = "<group>"; };
+		3DD1DC6C27D10F1B0037E08B /* fallback_desktop_capturer_wrapper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fallback_desktop_capturer_wrapper.cc; sourceTree = "<group>"; };
+		3DD1DC6F27D10F1B0037E08B /* screen_capturer_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen_capturer_mac.h; sourceTree = "<group>"; };
+		3DD1DC7027D10F1B0037E08B /* desktop_frame_cgimage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = desktop_frame_cgimage.mm; sourceTree = "<group>"; };
+		3DD1DC7127D10F1B0037E08B /* full_screen_mac_application_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = full_screen_mac_application_handler.h; sourceTree = "<group>"; };
+		3DD1DC7227D10F1B0037E08B /* full_screen_mac_application_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = full_screen_mac_application_handler.cc; sourceTree = "<group>"; };
+		3DD1DC7327D10F1B0037E08B /* window_list_utils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window_list_utils.cc; sourceTree = "<group>"; };
+		3DD1DC7427D10F1B0037E08B /* desktop_configuration_monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_configuration_monitor.h; sourceTree = "<group>"; };
+		3DD1DC7527D10F1B0037E08B /* desktop_configuration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = desktop_configuration.mm; sourceTree = "<group>"; };
+		3DD1DC7627D10F1B0037E08B /* desktop_frame_iosurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame_iosurface.h; sourceTree = "<group>"; };
+		3DD1DC7727D10F1B0037E08B /* desktop_frame_iosurface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = desktop_frame_iosurface.mm; sourceTree = "<group>"; };
+		3DD1DC7827D10F1B0037E08B /* desktop_configuration_monitor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_configuration_monitor.cc; sourceTree = "<group>"; };
+		3DD1DC7927D10F1B0037E08B /* desktop_frame_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame_provider.h; sourceTree = "<group>"; };
+		3DD1DC7A27D10F1B0037E08B /* desktop_configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_configuration.h; sourceTree = "<group>"; };
+		3DD1DC7B27D10F1B0037E08B /* desktop_frame_provider.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = desktop_frame_provider.mm; sourceTree = "<group>"; };
+		3DD1DC7C27D10F1B0037E08B /* screen_capturer_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = screen_capturer_mac.mm; sourceTree = "<group>"; };
+		3DD1DC7D27D10F1B0037E08B /* desktop_frame_cgimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame_cgimage.h; sourceTree = "<group>"; };
+		3DD1DC7E27D10F1B0037E08B /* window_list_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window_list_utils.h; sourceTree = "<group>"; };
+		3DD1DC7F27D10F1B0037E08B /* desktop_region.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_region.cc; sourceTree = "<group>"; };
+		3DD1DC8027D10F1B0037E08B /* desktop_region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_region.h; sourceTree = "<group>"; };
+		3DD1DC8127D10F1B0037E08B /* screen_capturer_darwin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = screen_capturer_darwin.mm; sourceTree = "<group>"; };
+		3DD1DC8227D10F1B0037E08B /* desktop_geometry.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_geometry.cc; sourceTree = "<group>"; };
+		3DD1DC8627D10F1B0037E08B /* cropping_window_capturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cropping_window_capturer.h; sourceTree = "<group>"; };
+		3DD1DC8727D10F1B0037E08B /* full_screen_application_handler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = full_screen_application_handler.cc; sourceTree = "<group>"; };
+		3DD1DC8827D10F1B0037E08B /* shared_desktop_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared_desktop_frame.h; sourceTree = "<group>"; };
+		3DD1DC8927D10F1B0037E08B /* mouse_cursor_monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mouse_cursor_monitor.h; sourceTree = "<group>"; };
+		3DD1DC8A27D10F1B0037E08B /* desktop_capturer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_capturer.cc; sourceTree = "<group>"; };
+		3DD1DC8B27D10F1B0037E08B /* differ_vector_sse2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = differ_vector_sse2.h; sourceTree = "<group>"; };
+		3DD1DC8C27D10F1B0037E08B /* desktop_capture_metrics_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capture_metrics_helper.h; sourceTree = "<group>"; };
+		3DD1DC8E27D10F1B0037E08B /* differ_block.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = differ_block.cc; sourceTree = "<group>"; };
+		3DD1DC9227D10F1B0037E08B /* OWNERS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OWNERS; sourceTree = "<group>"; };
+		3DD1DC9327D10F1B0037E08B /* DEPS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DEPS; sourceTree = "<group>"; };
+		3DD1DC9427D10F1B0037E08B /* window_finder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window_finder.cc; sourceTree = "<group>"; };
+		3DD1DC9527D10F1B0037E08B /* test_utils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_utils.cc; sourceTree = "<group>"; };
+		3DD1DC9627D10F1B0037E08B /* desktop_frame_generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_frame_generator.h; sourceTree = "<group>"; };
+		3DD1DC9827D10F1B0037E08B /* desktop_capture_options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capture_options.h; sourceTree = "<group>"; };
+		3DD1DC9A27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blank_detector_desktop_capturer_wrapper.h; sourceTree = "<group>"; };
+		3DD1DC9B27D10F1B0037E08B /* screen_drawer_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen_drawer_mac.cc; sourceTree = "<group>"; };
+		3DD1DC9C27D10F1B0037E08B /* mouse_cursor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mouse_cursor.h; sourceTree = "<group>"; };
+		3DD1DC9E27D10F1B0037E08B /* window_finder_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = window_finder_mac.mm; sourceTree = "<group>"; };
+		3DD1DCA127D10F1B0037E08B /* cropping_window_capturer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cropping_window_capturer.cc; sourceTree = "<group>"; };
+		3DD1DCA327D10F1B0037E08B /* app_window_capturer_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = app_window_capturer_mac.mm; sourceTree = "<group>"; };
+		3DD1DCA427D10F1B0037E08B /* desktop_capturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desktop_capturer.h; sourceTree = "<group>"; };
+		3DD1DCA627D10F1B0037E08B /* screen_drawer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen_drawer.cc; sourceTree = "<group>"; };
+		3DD1DCA727D10F1B0037E08B /* screen_capturer_null.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen_capturer_null.cc; sourceTree = "<group>"; };
+		3DD1DCA827D10F1B0037E08B /* desktop_capture_options.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = desktop_capture_options.cc; sourceTree = "<group>"; };
+		3DD1DCAB27D10F1B0037E08B /* shared_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shared_memory.h; sourceTree = "<group>"; };
+		3DD1DCAC27D10F1B0037E08B /* shared_memory.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shared_memory.cc; sourceTree = "<group>"; };
+		3DD1DCAE27D10F1B0037E08B /* screen_drawer_lock_posix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen_drawer_lock_posix.h; sourceTree = "<group>"; };
+		3DD1DCB027D10F1B0037E08B /* rgba_color.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rgba_color.cc; sourceTree = "<group>"; };
+		3DD1DCB127D10F1B0037E08B /* rgba_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rgba_color.h; sourceTree = "<group>"; };
+		3DD1DCB327D10F1B0037E08B /* SaveFileForCGImage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SaveFileForCGImage.hpp; sourceTree = "<group>"; };
+		3DD1EDD427D110B20037E08B /* SaveFileForCGImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SaveFileForCGImage.cpp; sourceTree = "<group>"; };
+		3DD1EDD827D1133B0037E08B /* color_space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = color_space.h; path = api/video/color_space.h; sourceTree = "<group>"; };
+		3DD1EDD927D1133B0037E08B /* color_space.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = color_space.cc; path = api/video/color_space.cc; sourceTree = "<group>"; };
+		3DD1EDDC27D113610037E08B /* video_frame.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = video_frame.cc; path = api/video/video_frame.cc; sourceTree = "<group>"; };
+		3DD1EDDD27D113610037E08B /* video_frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_frame.h; path = api/video/video_frame.h; sourceTree = "<group>"; };
+		3DD1EDE127D113900037E08B /* libyuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libyuv.h; sourceTree = "<group>"; };
+		3DD1EDE327D113900037E08B /* scale_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_row.h; sourceTree = "<group>"; };
+		3DD1EDE427D113900037E08B /* scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale.h; sourceTree = "<group>"; };
+		3DD1EDE527D113900037E08B /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		3DD1EDE627D113900037E08B /* cpu_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_id.h; sourceTree = "<group>"; };
+		3DD1EDE727D113900037E08B /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		3DD1EDE827D113900037E08B /* compare_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare_row.h; sourceTree = "<group>"; };
+		3DD1EDE927D113900037E08B /* mjpeg_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mjpeg_decoder.h; sourceTree = "<group>"; };
+		3DD1EDEA27D113900037E08B /* rotate_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_row.h; sourceTree = "<group>"; };
+		3DD1EDEB27D113900037E08B /* planar_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planar_functions.h; sourceTree = "<group>"; };
+		3DD1EDEC27D113900037E08B /* scale_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_argb.h; sourceTree = "<group>"; };
+		3DD1EDED27D113900037E08B /* compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare.h; sourceTree = "<group>"; };
+		3DD1EDEE27D113900037E08B /* convert_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_argb.h; sourceTree = "<group>"; };
+		3DD1EDEF27D113900037E08B /* rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate.h; sourceTree = "<group>"; };
+		3DD1EDF027D113900037E08B /* convert_from_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from_argb.h; sourceTree = "<group>"; };
+		3DD1EDF127D113900037E08B /* basic_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basic_types.h; sourceTree = "<group>"; };
+		3DD1EDF227D113900037E08B /* scale_uv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_uv.h; sourceTree = "<group>"; };
+		3DD1EDF327D113900037E08B /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from.h; sourceTree = "<group>"; };
+		3DD1EDF427D113900037E08B /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		3DD1EDF527D113900037E08B /* rotate_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_argb.h; sourceTree = "<group>"; };
+		3DD1EDF627D113900037E08B /* macros_msa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros_msa.h; sourceTree = "<group>"; };
+		3DD1EDF727D113900037E08B /* row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = row.h; sourceTree = "<group>"; };
+		3DD1EE0E27D113C00037E08B /* scoped_refptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scoped_refptr.h; path = api/scoped_refptr.h; sourceTree = "<group>"; };
+		3DD1EE1027D1140C0037E08B /* aligned_malloc.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = aligned_malloc.cc; path = rtc_base/memory/aligned_malloc.cc; sourceTree = "<group>"; };
+		3DD1EE1127D1140C0037E08B /* aligned_malloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aligned_malloc.h; path = rtc_base/memory/aligned_malloc.h; sourceTree = "<group>"; };
+		3DD1EE1427D1149D0037E08B /* video_frame_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_frame_buffer.h; path = api/video/video_frame_buffer.h; sourceTree = "<group>"; };
+		3DD1EE1527D1149D0037E08B /* video_rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = video_rotation.h; path = api/video/video_rotation.h; sourceTree = "<group>"; };
+		3DD1EE1627D1149D0037E08B /* video_frame_buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = video_frame_buffer.cc; path = api/video/video_frame_buffer.cc; sourceTree = "<group>"; };
+		3DD1EE1A27D114A80037E08B /* yield_policy.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = yield_policy.cc; sourceTree = "<group>"; };
+		3DD1EE1C27D115270037E08B /* random.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = random.cc; sourceTree = "<group>"; };
+		3DD1EE1D27D115270037E08B /* metrics.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = metrics.cc; sourceTree = "<group>"; };
+		3DD1EE1E27D115270037E08B /* event.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cc; sourceTree = "<group>"; };
+		3DD1EE1F27D115270037E08B /* sequence_checker_internal.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sequence_checker_internal.cc; sourceTree = "<group>"; };
+		3DD1EE2027D115270037E08B /* task_queue_base.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = task_queue_base.cc; sourceTree = "<group>"; };
+		3DD1EE2127D115270037E08B /* event_tracer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event_tracer.cc; sourceTree = "<group>"; };
+		3DD1EE2227D115270037E08B /* differ_vector_sse2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = differ_vector_sse2.cc; sourceTree = "<group>"; };
+		3DD1EE2327D115270037E08B /* string_encode.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_encode.cc; sourceTree = "<group>"; };
+		3DD1EE2427D115270037E08B /* platform_thread.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform_thread.cc; sourceTree = "<group>"; };
+		3DD1EE2E27D115520037E08B /* trace_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = trace_event.h; path = rtc_base/trace_event.h; sourceTree = "<group>"; };
+		3DD1EE3027D115F00037E08B /* string_builder.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_builder.cc; sourceTree = "<group>"; };
+		3DD1EE3227D115F00037E08B /* logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logging.cc; sourceTree = "<group>"; };
+		3DD1EE3327D115F10037E08B /* platform_thread_types.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform_thread_types.cc; sourceTree = "<group>"; };
+		3DD1EE3427D115F10037E08B /* checks.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = checks.cc; sourceTree = "<group>"; };
+		3DD1EE3527D115F10037E08B /* time_utils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_utils.cc; sourceTree = "<group>"; };
+		3DD1EE3627D115F10037E08B /* string_utils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_utils.cc; sourceTree = "<group>"; };
+		3DE3DC5527D28869005CB845 /* i420_buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = i420_buffer.cc; path = api/video/i420_buffer.cc; sourceTree = "<group>"; };
+		3DE3DC5627D28869005CB845 /* i420_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = i420_buffer.h; path = api/video/i420_buffer.h; sourceTree = "<group>"; };
+		3DE3DC5F27D2AFDD005CB845 /* nv12_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nv12_buffer.h; path = api/video/nv12_buffer.h; sourceTree = "<group>"; };
+		3DE3DC6027D2AFDD005CB845 /* nv12_buffer.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = nv12_buffer.cc; path = api/video/nv12_buffer.cc; sourceTree = "<group>"; };
+		3DFCF8F227D6211B00C391C4 /* MacShareAppStaticLibClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacShareAppStaticLibClass.cpp; sourceTree = "<group>"; };
+		3DFCF8F327D6211B00C391C4 /* MacShareAppStaticLibClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MacShareAppStaticLibClass.hpp; sourceTree = "<group>"; };
+		D1C7200729FBE293004AA92B /* libyuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libyuv.a; path = macShareAppStaticLib/src_webRTC/third_party/libyuv/lib/libyuv.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DD1C67B27D0FA370037E08B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6DAE5127D14825007917A2 /* AppKit.framework in Frameworks */,
+				3D6DAE4F27D1481D007917A2 /* IOKit.framework in Frameworks */,
+				3D6DAE4D27D14814007917A2 /* IOSurface.framework in Frameworks */,
+				D7932F4D2BC7F29A00CA8FF5 /* libyuv.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D3967E427D11C27001C50A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1C7200729FBE293004AA92B /* libyuv.a */,
+				3D6DAE5027D14825007917A2 /* AppKit.framework */,
+				3D6DAE4E27D1481D007917A2 /* IOKit.framework */,
+				3D6DAE4C27D14814007917A2 /* IOSurface.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D84EBE02811ED09007C89C6 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				3D84EBE12811ED09007C89C6 /* content-paused.png */,
+				3D84EBE22811ED09007C89C6 /* content-paused@2x.png */,
+			);
+			name = image;
+			path = macShareAppStaticLib/image;
+			sourceTree = "<group>";
+		};
+		3DD1C67427D0FA370037E08B = {
+			isa = PBXGroup;
+			children = (
+				3D84EBE02811ED09007C89C6 /* image */,
+				3DD1C67F27D0FA370037E08B /* macShareAppStaticLib */,
+				3DD1C67E27D0FA370037E08B /* Products */,
+				3D3967E427D11C27001C50A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DD1C67E27D0FA370037E08B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1C67D27D0FA370037E08B /* libmacShareAppStaticLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DD1C67F27D0FA370037E08B /* macShareAppStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				3D6DAE4327D12C87007917A2 /* common.h */,
+				3DFCF8F327D6211B00C391C4 /* MacShareAppStaticLibClass.hpp */,
+				3DFCF8F227D6211B00C391C4 /* MacShareAppStaticLibClass.cpp */,
+				3DD1CA7327D10F080037E08B /* src_webRTC */,
+			);
+			path = macShareAppStaticLib;
+			sourceTree = "<group>";
+		};
+		3DD1CA7327D10F080037E08B /* src_webRTC */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1EDD727D112F20037E08B /* others */,
+				3DD1CD4A27D10F0B0037E08B /* common_video */,
+				3DD1DC2827D10F1A0037E08B /* modules */,
+				3DD1DCB327D10F1B0037E08B /* SaveFileForCGImage.hpp */,
+				3DD1EDD427D110B20037E08B /* SaveFileForCGImage.cpp */,
+			);
+			path = src_webRTC;
+			sourceTree = "<group>";
+		};
+		3DD1CD4A27D10F0B0037E08B /* common_video */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1CD4B27D10F0B0037E08B /* libyuv */,
+			);
+			path = common_video;
+			sourceTree = "<group>";
+		};
+		3DD1CD4B27D10F0B0037E08B /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1CD4C27D10F0B0037E08B /* webrtc_libyuv.cc */,
+				3DD1CD4D27D10F0B0037E08B /* include */,
+			);
+			path = libyuv;
+			sourceTree = "<group>";
+		};
+		3DD1CD4D27D10F0B0037E08B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1CD4E27D10F0B0037E08B /* webrtc_libyuv.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		3DD1DC2827D10F1A0037E08B /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1DC2927D10F1A0037E08B /* desktop_capture */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		3DD1DC2927D10F1A0037E08B /* desktop_capture */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1DC3127D10F1A0037E08B /* use_app_window_capturer_mac.hpp */,
+				3DD1DC4F27D10F1B0037E08B /* use_app_window_capturer_mac.mm */,
+				3DD1DC3427D10F1A0037E08B /* app_window_capturer_mac.hpp */,
+				3DD1DCA327D10F1B0037E08B /* app_window_capturer_mac.mm */,
+				3DD1DC2A27D10F1A0037E08B /* full_screen_application_handler.h */,
+				3DD1DC2D27D10F1A0037E08B /* desktop_capture_types.h */,
+				3DD1DC2E27D10F1A0037E08B /* differ_vector_sse2.cc */,
+				3DD1DC3027D10F1A0037E08B /* desktop_geometry.h */,
+				3DD1DC3227D10F1A0037E08B /* desktop_capturer_wrapper.cc */,
+				3DD1DC3327D10F1A0037E08B /* desktop_capturer_wrapper.h */,
+				3DD1DC3527D10F1B0037E08B /* fake_desktop_capturer.cc */,
+				3DD1DC3727D10F1B0037E08B /* desktop_capturer_differ_wrapper.h */,
+				3DD1DC3927D10F1B0037E08B /* desktop_frame_generator.cc */,
+				3DD1DC3A27D10F1B0037E08B /* cropped_desktop_frame.h */,
+				3DD1DC3D27D10F1B0037E08B /* cropped_desktop_frame.cc */,
+				3DD1DC3E27D10F1B0037E08B /* full_screen_window_detector.h */,
+				3DD1DC4027D10F1B0037E08B /* window_finder.h */,
+				3DD1DC4127D10F1B0037E08B /* desktop_frame_rotation.cc */,
+				3DD1DC4327D10F1B0037E08B /* test_utils.h */,
+				3DD1DC4627D10F1B0037E08B /* desktop_frame.cc */,
+				3DD1DC4727D10F1B0037E08B /* differ_block.h */,
+				3DD1DC4827D10F1B0037E08B /* desktop_frame.h */,
+				3D6BC08D27F7438000FBDB02 /* window_capturer_mac.mm */,
+				3DD1DC4E27D10F1B0037E08B /* desktop_capture_metrics_helper.cc */,
+				3DD1DC5027D10F1B0037E08B /* desktop_and_cursor_composer.h */,
+				3DD1DC5127D10F1B0037E08B /* mouse_cursor.cc */,
+				3DD1DC5227D10F1B0037E08B /* screen_capture_frame_queue.h */,
+				3DD1DC5627D10F1B0037E08B /* resolution_tracker.cc */,
+				3DD1DC5727D10F1B0037E08B /* screen_drawer.h */,
+				3DD1DC5827D10F1B0037E08B /* desktop_and_cursor_composer.cc */,
+				3DD1DC5927D10F1B0037E08B /* mouse_cursor_monitor_mac.mm */,
+				3DD1DC5A27D10F1B0037E08B /* screen_drawer_lock_posix.cc */,
+				3DD1DC5C27D10F1B0037E08B /* resolution_tracker.h */,
+				3DD1DC5D27D10F1B0037E08B /* screen_capturer_helper.h */,
+				3DD1DC5E27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.cc */,
+				3DD1DC6027D10F1B0037E08B /* full_screen_window_detector.cc */,
+				3DD1DC6127D10F1B0037E08B /* desktop_frame_rotation.h */,
+				3DD1DC6327D10F1B0037E08B /* shared_desktop_frame.cc */,
+				3DD1DC6627D10F1B0037E08B /* window_finder_mac.h */,
+				3DD1DC6727D10F1B0037E08B /* fallback_desktop_capturer_wrapper.h */,
+				3DD1DC6927D10F1B0037E08B /* desktop_capturer_differ_wrapper.cc */,
+				3DD1DC6A27D10F1B0037E08B /* fake_desktop_capturer.h */,
+				3DD1DC6B27D10F1B0037E08B /* screen_capturer_helper.cc */,
+				3DD1DC6C27D10F1B0037E08B /* fallback_desktop_capturer_wrapper.cc */,
+				3DD1DC6E27D10F1B0037E08B /* mac */,
+				3DD1DC7F27D10F1B0037E08B /* desktop_region.cc */,
+				3DD1DC8027D10F1B0037E08B /* desktop_region.h */,
+				3DD1DC8127D10F1B0037E08B /* screen_capturer_darwin.mm */,
+				3DD1DC8227D10F1B0037E08B /* desktop_geometry.cc */,
+				3DD1DC8627D10F1B0037E08B /* cropping_window_capturer.h */,
+				3DD1DC8727D10F1B0037E08B /* full_screen_application_handler.cc */,
+				3DD1DC8827D10F1B0037E08B /* shared_desktop_frame.h */,
+				3DD1DC8927D10F1B0037E08B /* mouse_cursor_monitor.h */,
+				3DD1DC8A27D10F1B0037E08B /* desktop_capturer.cc */,
+				3DD1DC8B27D10F1B0037E08B /* differ_vector_sse2.h */,
+				3DD1DC8C27D10F1B0037E08B /* desktop_capture_metrics_helper.h */,
+				3DD1DC8E27D10F1B0037E08B /* differ_block.cc */,
+				3DD1DC9227D10F1B0037E08B /* OWNERS */,
+				3DD1DC9327D10F1B0037E08B /* DEPS */,
+				3DD1DC9427D10F1B0037E08B /* window_finder.cc */,
+				3DD1DC9527D10F1B0037E08B /* test_utils.cc */,
+				3DD1DC9627D10F1B0037E08B /* desktop_frame_generator.h */,
+				3DD1DC9827D10F1B0037E08B /* desktop_capture_options.h */,
+				3DD1DC9A27D10F1B0037E08B /* blank_detector_desktop_capturer_wrapper.h */,
+				3DD1DC9B27D10F1B0037E08B /* screen_drawer_mac.cc */,
+				3DD1DC9C27D10F1B0037E08B /* mouse_cursor.h */,
+				3DD1DC9E27D10F1B0037E08B /* window_finder_mac.mm */,
+				3DD1DCA127D10F1B0037E08B /* cropping_window_capturer.cc */,
+				3DD1DCA427D10F1B0037E08B /* desktop_capturer.h */,
+				3DD1DCA627D10F1B0037E08B /* screen_drawer.cc */,
+				3DD1DCA727D10F1B0037E08B /* screen_capturer_null.cc */,
+				3DD1DCA827D10F1B0037E08B /* desktop_capture_options.cc */,
+				3DD1DCAB27D10F1B0037E08B /* shared_memory.h */,
+				3DD1DCAC27D10F1B0037E08B /* shared_memory.cc */,
+				3DD1DCAE27D10F1B0037E08B /* screen_drawer_lock_posix.h */,
+				3DD1DCB027D10F1B0037E08B /* rgba_color.cc */,
+				3DD1DCB127D10F1B0037E08B /* rgba_color.h */,
+			);
+			path = desktop_capture;
+			sourceTree = "<group>";
+		};
+		3DD1DC6E27D10F1B0037E08B /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1DC6F27D10F1B0037E08B /* screen_capturer_mac.h */,
+				3DD1DC7027D10F1B0037E08B /* desktop_frame_cgimage.mm */,
+				3DD1DC7127D10F1B0037E08B /* full_screen_mac_application_handler.h */,
+				3DD1DC7227D10F1B0037E08B /* full_screen_mac_application_handler.cc */,
+				3DD1DC7327D10F1B0037E08B /* window_list_utils.cc */,
+				3DD1DC7427D10F1B0037E08B /* desktop_configuration_monitor.h */,
+				3DD1DC7527D10F1B0037E08B /* desktop_configuration.mm */,
+				3DD1DC7627D10F1B0037E08B /* desktop_frame_iosurface.h */,
+				3DD1DC7727D10F1B0037E08B /* desktop_frame_iosurface.mm */,
+				3DD1DC7827D10F1B0037E08B /* desktop_configuration_monitor.cc */,
+				3DD1DC7927D10F1B0037E08B /* desktop_frame_provider.h */,
+				3DD1DC7A27D10F1B0037E08B /* desktop_configuration.h */,
+				3DD1DC7B27D10F1B0037E08B /* desktop_frame_provider.mm */,
+				3DD1DC7C27D10F1B0037E08B /* screen_capturer_mac.mm */,
+				3DD1DC7D27D10F1B0037E08B /* desktop_frame_cgimage.h */,
+				3DD1DC7E27D10F1B0037E08B /* window_list_utils.h */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		3DD1EDD727D112F20037E08B /* others */ = {
+			isa = PBXGroup;
+			children = (
+				3DE3DC5527D28869005CB845 /* i420_buffer.cc */,
+				3DE3DC6027D2AFDD005CB845 /* nv12_buffer.cc */,
+				3DE3DC5F27D2AFDD005CB845 /* nv12_buffer.h */,
+				3DE3DC5627D28869005CB845 /* i420_buffer.h */,
+				3DD1EE3427D115F10037E08B /* checks.cc */,
+				3DD1EE3227D115F00037E08B /* logging.cc */,
+				3DD1EE3327D115F10037E08B /* platform_thread_types.cc */,
+				3DD1EE3027D115F00037E08B /* string_builder.cc */,
+				3DD1EE3627D115F10037E08B /* string_utils.cc */,
+				3D6DAE4527D13AE6007917A2 /* system_time.cc */,
+				3D6DAE4427D13AE6007917A2 /* system_time.h */,
+				3DD1EE3527D115F10037E08B /* time_utils.cc */,
+				3DD1EE2E27D115520037E08B /* trace_event.h */,
+				3DD1EE2227D115270037E08B /* differ_vector_sse2.cc */,
+				3DD1EE2127D115270037E08B /* event_tracer.cc */,
+				3DD1EE1E27D115270037E08B /* event.cc */,
+				3DD1EE1D27D115270037E08B /* metrics.cc */,
+				3DD1EE2427D115270037E08B /* platform_thread.cc */,
+				3DD1EE1C27D115270037E08B /* random.cc */,
+				3DD1EE1F27D115270037E08B /* sequence_checker_internal.cc */,
+				3DD1EE2327D115270037E08B /* string_encode.cc */,
+				3DD1EE2027D115270037E08B /* task_queue_base.cc */,
+				3DD1EE1A27D114A80037E08B /* yield_policy.cc */,
+				3DD1EE1627D1149D0037E08B /* video_frame_buffer.cc */,
+				3DD1EE1427D1149D0037E08B /* video_frame_buffer.h */,
+				3DD1EE1527D1149D0037E08B /* video_rotation.h */,
+				3DD1EE1027D1140C0037E08B /* aligned_malloc.cc */,
+				3DD1EE1127D1140C0037E08B /* aligned_malloc.h */,
+				3DD1EE0E27D113C00037E08B /* scoped_refptr.h */,
+				3DD1EDE027D113900037E08B /* include */,
+				3DD1EDDC27D113610037E08B /* video_frame.cc */,
+				3DD1EDDD27D113610037E08B /* video_frame.h */,
+				3DD1EDD927D1133B0037E08B /* color_space.cc */,
+				3DD1EDD827D1133B0037E08B /* color_space.h */,
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
+		3DD1EDE027D113900037E08B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1EDE127D113900037E08B /* libyuv.h */,
+				3DD1EDE227D113900037E08B /* libyuv */,
+			);
+			name = include;
+			path = third_party/libyuv/include;
+			sourceTree = "<group>";
+		};
+		3DD1EDE227D113900037E08B /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				3DD1EDE327D113900037E08B /* scale_row.h */,
+				3DD1EDE427D113900037E08B /* scale.h */,
+				3DD1EDE527D113900037E08B /* version.h */,
+				3DD1EDE627D113900037E08B /* cpu_id.h */,
+				3DD1EDE727D113900037E08B /* video_common.h */,
+				3DD1EDE827D113900037E08B /* compare_row.h */,
+				3DD1EDE927D113900037E08B /* mjpeg_decoder.h */,
+				3DD1EDEA27D113900037E08B /* rotate_row.h */,
+				3DD1EDEB27D113900037E08B /* planar_functions.h */,
+				3DD1EDEC27D113900037E08B /* scale_argb.h */,
+				3DD1EDED27D113900037E08B /* compare.h */,
+				3DD1EDEE27D113900037E08B /* convert_argb.h */,
+				3DD1EDEF27D113900037E08B /* rotate.h */,
+				3DD1EDF027D113900037E08B /* convert_from_argb.h */,
+				3DD1EDF127D113900037E08B /* basic_types.h */,
+				3DD1EDF227D113900037E08B /* scale_uv.h */,
+				3DD1EDF327D113900037E08B /* convert_from.h */,
+				3DD1EDF427D113900037E08B /* convert.h */,
+				3DD1EDF527D113900037E08B /* rotate_argb.h */,
+				3DD1EDF627D113900037E08B /* macros_msa.h */,
+				3DD1EDF727D113900037E08B /* row.h */,
+			);
+			path = libyuv;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3DD1C67927D0FA370037E08B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE3DC5B27D2AAF8005CB845 /* video_frame_buffer.cc in Headers */,
+				3DD1EDD027D10F270037E08B /* rgba_color.h in Headers */,
+				3DE3DC5827D28869005CB845 /* i420_buffer.h in Headers */,
+				3DE3DC6127D2AFDD005CB845 /* nv12_buffer.h in Headers */,
+				3DD1ED8627D10F270037E08B /* window_finder_mac.h in Headers */,
+				3DFCF8F527D6211B00C391C4 /* MacShareAppStaticLibClass.hpp in Headers */,
+				3DD1ED5127D10F270037E08B /* use_app_window_capturer_mac.hpp in Headers */,
+				3DD1ED9C27D10F270037E08B /* desktop_frame_cgimage.h in Headers */,
+				3DD1ED7727D10F270037E08B /* screen_drawer.h in Headers */,
+				3DD1EDAA27D10F270037E08B /* differ_vector_sse2.h in Headers */,
+				3DD1EE0F27D113C00037E08B /* scoped_refptr.h in Headers */,
+				3DD1ED9D27D10F270037E08B /* window_list_utils.h in Headers */,
+				3DD1ED6727D10F270037E08B /* differ_block.h in Headers */,
+				3DD1ED9527D10F270037E08B /* desktop_frame_iosurface.h in Headers */,
+				3DD1EDAB27D10F270037E08B /* desktop_capture_metrics_helper.h in Headers */,
+				3DD1EDCA27D10F270037E08B /* shared_memory.h in Headers */,
+				3DD1EDB527D10F270037E08B /* desktop_frame_generator.h in Headers */,
+				3DD1EDDF27D113610037E08B /* video_frame.h in Headers */,
+				3DD1EE0927D113900037E08B /* convert_from.h in Headers */,
+				3DD1EE0A27D113900037E08B /* convert.h in Headers */,
+				3DD1ED7227D10F270037E08B /* screen_capture_frame_queue.h in Headers */,
+				3DD1ED9827D10F270037E08B /* desktop_frame_provider.h in Headers */,
+				3DD1ED5727D10F270037E08B /* desktop_capturer_differ_wrapper.h in Headers */,
+				3DD1ED7C27D10F270037E08B /* resolution_tracker.h in Headers */,
+				3DD1EDFF27D113900037E08B /* mjpeg_decoder.h in Headers */,
+				3DD1EDA527D10F270037E08B /* cropping_window_capturer.h in Headers */,
+				3DD1ED9027D10F270037E08B /* full_screen_mac_application_handler.h in Headers */,
+				3DD1ED9927D10F270037E08B /* desktop_configuration.h in Headers */,
+				3DD1EE1827D1149D0037E08B /* video_rotation.h in Headers */,
+				3DD1EDBB27D10F270037E08B /* mouse_cursor.h in Headers */,
+				3DD1ED5027D10F270037E08B /* desktop_geometry.h in Headers */,
+				3DD1ED7D27D10F270037E08B /* screen_capturer_helper.h in Headers */,
+				3D6DAE4627D13AE6007917A2 /* system_time.h in Headers */,
+				3DD1ED9327D10F270037E08B /* desktop_configuration_monitor.h in Headers */,
+				3DD1ED8127D10F270037E08B /* desktop_frame_rotation.h in Headers */,
+				3DD1EE1327D1140C0037E08B /* aligned_malloc.h in Headers */,
+				3DD1EE0127D113900037E08B /* planar_functions.h in Headers */,
+				3DD1ED8E27D10F270037E08B /* screen_capturer_mac.h in Headers */,
+				3DD1EDD227D10F270037E08B /* SaveFileForCGImage.hpp in Headers */,
+				3DD1EE0527D113900037E08B /* rotate.h in Headers */,
+				3DD1ED5A27D10F270037E08B /* cropped_desktop_frame.h in Headers */,
+				3DD1EDC327D10F270037E08B /* desktop_capturer.h in Headers */,
+				3DD1EDFA27D113900037E08B /* scale.h in Headers */,
+				3DD1EDA827D10F270037E08B /* mouse_cursor_monitor.h in Headers */,
+				3DD1ED6327D10F270037E08B /* test_utils.h in Headers */,
+				3DD1EDF827D113900037E08B /* libyuv.h in Headers */,
+				3DD1ED6827D10F270037E08B /* desktop_frame.h in Headers */,
+				3DD1EDB727D10F270037E08B /* desktop_capture_options.h in Headers */,
+				3DD1EE0327D113900037E08B /* compare.h in Headers */,
+				3DD1ED9F27D10F270037E08B /* desktop_region.h in Headers */,
+				3DD1EE0D27D113900037E08B /* row.h in Headers */,
+				3DD1EDF927D113900037E08B /* scale_row.h in Headers */,
+				3DD1DF5427D10F1D0037E08B /* webrtc_libyuv.h in Headers */,
+				3DD1EE0727D113900037E08B /* basic_types.h in Headers */,
+				3DD1EE0627D113900037E08B /* convert_from_argb.h in Headers */,
+				3DD1EE2F27D115520037E08B /* trace_event.h in Headers */,
+				3DD1EE0C27D113900037E08B /* macros_msa.h in Headers */,
+				3DD1EE0827D113900037E08B /* scale_uv.h in Headers */,
+				3DD1ED4D27D10F270037E08B /* desktop_capture_types.h in Headers */,
+				3DD1EDFE27D113900037E08B /* compare_row.h in Headers */,
+				3DD1EE0427D113900037E08B /* convert_argb.h in Headers */,
+				3DD1ED5E27D10F270037E08B /* full_screen_window_detector.h in Headers */,
+				3DD1EE0027D113900037E08B /* rotate_row.h in Headers */,
+				3DD1ED5327D10F270037E08B /* desktop_capturer_wrapper.h in Headers */,
+				3DD1ED5427D10F270037E08B /* app_window_capturer_mac.hpp in Headers */,
+				3DD1EDCD27D10F270037E08B /* screen_drawer_lock_posix.h in Headers */,
+				3DD1EDDA27D1133B0037E08B /* color_space.h in Headers */,
+				3DD1ED8727D10F270037E08B /* fallback_desktop_capturer_wrapper.h in Headers */,
+				3DD1ED6027D10F270037E08B /* window_finder.h in Headers */,
+				3DD1EDFB27D113900037E08B /* version.h in Headers */,
+				3DD1ED8A27D10F270037E08B /* fake_desktop_capturer.h in Headers */,
+				3DD1EDFC27D113900037E08B /* cpu_id.h in Headers */,
+				3DD1EDA727D10F270037E08B /* shared_desktop_frame.h in Headers */,
+				3DD1EE0227D113900037E08B /* scale_argb.h in Headers */,
+				3DD1ED4A27D10F270037E08B /* full_screen_application_handler.h in Headers */,
+				3DD1ED7027D10F270037E08B /* desktop_and_cursor_composer.h in Headers */,
+				3DD1EDB927D10F270037E08B /* blank_detector_desktop_capturer_wrapper.h in Headers */,
+				3DD1EDFD27D113900037E08B /* video_common.h in Headers */,
+				3DD1EE0B27D113900037E08B /* rotate_argb.h in Headers */,
+				3DD1EE1727D1149D0037E08B /* video_frame_buffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3DD1C67C27D0FA370037E08B /* macShareAppStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DD1C68627D0FA370037E08B /* Build configuration list for PBXNativeTarget "macShareAppStaticLib" */;
+			buildPhases = (
+				3DD1C67927D0FA370037E08B /* Headers */,
+				3DD1C67A27D0FA370037E08B /* Sources */,
+				3DD1C67B27D0FA370037E08B /* Frameworks */,
+				3DD1C68927D102230037E08B /* Resources */,
+				D1FCACDF2A05E6F7007C3104 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macShareAppStaticLib;
+			productName = macShareAppStaticLib;
+			productReference = 3DD1C67D27D0FA370037E08B /* libmacShareAppStaticLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DD1C67527D0FA370037E08B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3DD1C67C27D0FA370037E08B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3DD1C67827D0FA370037E08B /* Build configuration list for PBXProject "macShareAppStaticLib" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DD1C67427D0FA370037E08B;
+			productRefGroup = 3DD1C67E27D0FA370037E08B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DD1C67C27D0FA370037E08B /* macShareAppStaticLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DD1C68927D102230037E08B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DD1C68A27D102440037E08B /* libmacShareAppStaticLib.a in Resources */,
+				3D84EBE42811ED09007C89C6 /* content-paused@2x.png in Resources */,
+				3D84EBE32811ED09007C89C6 /* content-paused.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DD1C67A27D0FA370037E08B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE3DC5D27D2AE30005CB845 /* video_frame_buffer.cc in Sources */,
+				3DE3DC5E27D2AE30005CB845 /* video_frame_buffer.h in Sources */,
+				3DE3DC5C27D2AD55005CB845 /* i420_buffer.h in Sources */,
+				3DD1EE3B27D115F10037E08B /* checks.cc in Sources */,
+				3DD1EDA927D10F270037E08B /* desktop_capturer.cc in Sources */,
+				3DD1EE1B27D114A80037E08B /* yield_policy.cc in Sources */,
+				3DD1EE2C27D115270037E08B /* string_encode.cc in Sources */,
+				3DD1EDDE27D113610037E08B /* video_frame.cc in Sources */,
+				3DD1ED9627D10F270037E08B /* desktop_frame_iosurface.mm in Sources */,
+				3DD1EE2927D115270037E08B /* task_queue_base.cc in Sources */,
+				3DD1ED9727D10F270037E08B /* desktop_configuration_monitor.cc in Sources */,
+				3DD1EE2D27D115270037E08B /* platform_thread.cc in Sources */,
+				3DD1ED9E27D10F270037E08B /* desktop_region.cc in Sources */,
+				3DD1EE3A27D115F10037E08B /* platform_thread_types.cc in Sources */,
+				3DD1ED8027D10F270037E08B /* full_screen_window_detector.cc in Sources */,
+				3DD1EDAD27D10F270037E08B /* differ_block.cc in Sources */,
+				3DD1EDB427D10F270037E08B /* test_utils.cc in Sources */,
+				3DD1ED5227D10F270037E08B /* desktop_capturer_wrapper.cc in Sources */,
+				3D6DAE4727D13AE6007917A2 /* system_time.cc in Sources */,
+				3DD1ED7627D10F270037E08B /* resolution_tracker.cc in Sources */,
+				3DD1EDD527D110B30037E08B /* SaveFileForCGImage.cpp in Sources */,
+				3DD1EE2527D115270037E08B /* random.cc in Sources */,
+				3DD1ED7127D10F270037E08B /* mouse_cursor.cc in Sources */,
+				3DD1ED5D27D10F270037E08B /* cropped_desktop_frame.cc in Sources */,
+				3DD1ED9227D10F270037E08B /* window_list_utils.cc in Sources */,
+				3DD1ED9A27D10F270037E08B /* desktop_frame_provider.mm in Sources */,
+				3DD1ED8C27D10F270037E08B /* fallback_desktop_capturer_wrapper.cc in Sources */,
+				3DD1EDC027D10F270037E08B /* cropping_window_capturer.cc in Sources */,
+				3DD1EDCF27D10F270037E08B /* rgba_color.cc in Sources */,
+				3DD1ED9B27D10F270037E08B /* screen_capturer_mac.mm in Sources */,
+				3DD1EE2B27D115270037E08B /* differ_vector_sse2.cc in Sources */,
+				3DD1ED6627D10F270037E08B /* desktop_frame.cc in Sources */,
+				3DD1ED8B27D10F270037E08B /* screen_capturer_helper.cc in Sources */,
+				3DD1ED7827D10F270037E08B /* desktop_and_cursor_composer.cc in Sources */,
+				3DD1ED8927D10F270037E08B /* desktop_capturer_differ_wrapper.cc in Sources */,
+				3DD1ED7A27D10F270037E08B /* screen_drawer_lock_posix.cc in Sources */,
+				3DD1EE2827D115270037E08B /* sequence_checker_internal.cc in Sources */,
+				3DD1ED7E27D10F270037E08B /* blank_detector_desktop_capturer_wrapper.cc in Sources */,
+				3DD1EE3C27D115F10037E08B /* time_utils.cc in Sources */,
+				3DD1EDA627D10F270037E08B /* full_screen_application_handler.cc in Sources */,
+				3DD1EDA027D10F270037E08B /* screen_capturer_darwin.mm in Sources */,
+				3DD1ED4E27D10F270037E08B /* differ_vector_sse2.cc in Sources */,
+				3DD1ED5527D10F270037E08B /* fake_desktop_capturer.cc in Sources */,
+				3DE3DC5727D28869005CB845 /* i420_buffer.cc in Sources */,
+				3DD1EE3927D115F10037E08B /* logging.cc in Sources */,
+				3DD1EDCB27D10F270037E08B /* shared_memory.cc in Sources */,
+				3D6BC08E27F7438000FBDB02 /* window_capturer_mac.mm in Sources */,
+				3DD1ED6E27D10F270037E08B /* desktop_capture_metrics_helper.cc in Sources */,
+				3DD1ED5927D10F270037E08B /* desktop_frame_generator.cc in Sources */,
+				3DD1ED8327D10F270037E08B /* shared_desktop_frame.cc in Sources */,
+				3DD1EDC527D10F270037E08B /* screen_drawer.cc in Sources */,
+				3DD1EE2727D115270037E08B /* event.cc in Sources */,
+				3DD1EDC627D10F270037E08B /* screen_capturer_null.cc in Sources */,
+				3DD1ED6F27D10F270037E08B /* use_app_window_capturer_mac.mm in Sources */,
+				3DD1EE3D27D115F10037E08B /* string_utils.cc in Sources */,
+				3DD1ED8F27D10F270037E08B /* desktop_frame_cgimage.mm in Sources */,
+				3DD1EDC227D10F270037E08B /* app_window_capturer_mac.mm in Sources */,
+				3DD1EDBA27D10F270037E08B /* screen_drawer_mac.cc in Sources */,
+				3DD1EE1227D1140C0037E08B /* aligned_malloc.cc in Sources */,
+				3DD1ED6127D10F270037E08B /* desktop_frame_rotation.cc in Sources */,
+				3DD1EE2627D115270037E08B /* metrics.cc in Sources */,
+				3DD1EDB327D10F270037E08B /* window_finder.cc in Sources */,
+				3DD1EE2A27D115270037E08B /* event_tracer.cc in Sources */,
+				3DD1EDBD27D10F270037E08B /* window_finder_mac.mm in Sources */,
+				3DFCF8F427D6211B00C391C4 /* MacShareAppStaticLibClass.cpp in Sources */,
+				3DD1EE3727D115F10037E08B /* string_builder.cc in Sources */,
+				3DD1EDA127D10F270037E08B /* desktop_geometry.cc in Sources */,
+				3DE3DC6227D2AFDD005CB845 /* nv12_buffer.cc in Sources */,
+				3DD1EDC727D10F270037E08B /* desktop_capture_options.cc in Sources */,
+				3DD1ED9127D10F270037E08B /* full_screen_mac_application_handler.cc in Sources */,
+				3DD1ED7927D10F270037E08B /* mouse_cursor_monitor_mac.mm in Sources */,
+				3DD1ED9427D10F270037E08B /* desktop_configuration.mm in Sources */,
+				3DD1EDDB27D1133B0037E08B /* color_space.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3DD1C68427D0FA370037E08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3DD1C68527D0FA370037E08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3DD1C68727D0FA370037E08B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALJ27EG643;
+				EXECUTABLE_PREFIX = lib;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/",
+					macShareAppStaticLib/src_webRTC,
+					macShareAppStaticLib/src_webRTC/third_party/libyuv/include,
+					"macShareAppStaticLib/src_webRTC/third_party/abseil-cpp",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/macShareAppStaticLib/src_webRTC/dist",
+					"$(PROJECT_DIR)/macShareAppStaticLib/src_webRTC/third_party/libyuv/lib",
+					"$(PROJECT_DIR)/macShareAppStaticLib/dist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3DD1C68827D0FA370037E08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALJ27EG643;
+				EXECUTABLE_PREFIX = lib;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/",
+					macShareAppStaticLib/src_webRTC,
+					macShareAppStaticLib/src_webRTC/third_party/libyuv/include,
+					"macShareAppStaticLib/src_webRTC/third_party/abseil-cpp",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/macShareAppStaticLib/src_webRTC/dist",
+					"$(PROJECT_DIR)/macShareAppStaticLib/src_webRTC/third_party/libyuv/lib",
+					"$(PROJECT_DIR)/macShareAppStaticLib/dist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DD1C67827D0FA370037E08B /* Build configuration list for PBXProject "macShareAppStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DD1C68427D0FA370037E08B /* Debug */,
+				3DD1C68527D0FA370037E08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DD1C68627D0FA370037E08B /* Build configuration list for PBXNativeTarget "macShareAppStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DD1C68727D0FA370037E08B /* Debug */,
+				3DD1C68827D0FA370037E08B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DD1C67527D0FA370037E08B /* Project object */;
+}

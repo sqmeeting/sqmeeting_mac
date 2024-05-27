@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "sharing-app-content-pause-no-str.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "sharing-app-content-pause-no-str@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E2FA27E2799795D00E7608D /* call_camera_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2FA27D2799795D00E7608D /* call_camera_off.png */; };
+		8E2FA28027997D6100E7608D /* local_preview_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2FA27F27997D6100E7608D /* local_preview_off.png */; };
+		8E5CCF2E2785F1B000B3C293 /* call_camera_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CCF2D2785F1B000B3C293 /* call_camera_off@3x.png */; };
+		8E6E3560278C0C8200918BDE /* icon-incall-mute.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E355C278C0C8100918BDE /* icon-incall-mute.png */; };
+		8E6E3561278C0C8200918BDE /* icon-incall-mute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E355D278C0C8100918BDE /* icon-incall-mute@2x.png */; };
+		8E6E3562278C0C8200918BDE /* icon-incall-unmute.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E355E278C0C8100918BDE /* icon-incall-unmute.png */; };
+		8E6E3563278C0C8200918BDE /* icon-incall-unmute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6E355F278C0C8100918BDE /* icon-incall-unmute@2x.png */; };
+		AF44433B261C326A00A3483E /* icon-status-mute-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF444339261C326A00A3483E /* icon-status-mute-white@2x.png */; };
+		AF44433C261C326A00A3483E /* icon-status-mute-white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF44433A261C326A00A3483E /* icon-status-mute-white@3x.png */; };
+		AF44434A261C416D00A3483E /* status-mute@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF444347261C416D00A3483E /* status-mute@3x.png */; };
+		AF44434B261C416D00A3483E /* status-mute.png in Resources */ = {isa = PBXBuildFile; fileRef = AF444348261C416D00A3483E /* status-mute.png */; };
+		AF44434C261C416D00A3483E /* status-mute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF444349261C416D00A3483E /* status-mute@2x.png */; };
+		AF606F8B261451620002CD02 /* icon-status-pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF606F89261451620002CD02 /* icon-status-pin@3x.png */; };
+		AF606F8C261451620002CD02 /* icon-status-pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF606F8A261451620002CD02 /* icon-status-pin@2x.png */; };
+		D13FD83B26C4CEBF00CE015B /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = D13FD83A26C4CEBF00CE015B /* shader.metal */; };
+		D14B711F2A43EF7600EC9A66 /* audio_test.wav in Resources */ = {isa = PBXBuildFile; fileRef = D14B711E2A43EF7600EC9A66 /* audio_test.wav */; };
+		D14F3F9D25A6EB1C00E05EE9 /* sdk_call_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D14F3F9C25A6EB1C00E05EE9 /* sdk_call_bg.png */; };
+		D1D5B7EF25A7F2F200200B8B /* CallButton-video.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D5B7ED25A7F2F200200B8B /* CallButton-video.png */; };
+		D1D5B7F025A7F2F200200B8B /* CallButton-video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1D5B7EE25A7F2F200200B8B /* CallButton-video@2x.png */; };
+		D1E8BF712B7505D700C4ED88 /* FrtcMeetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1E8BF702B7505D700C4ED88 /* FrtcMeetingViewController.xib */; };
+		D1F61DCE25885BFA00F79A4F /* DisplayName@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DC725885BFA00F79A4F /* DisplayName@3x.png */; };
+		D1F61DCF25885BFA00F79A4F /* bg-cell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DC825885BFA00F79A4F /* bg-cell@2x.png */; };
+		D1F61DD025885BFA00F79A4F /* DisplayName.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DC925885BFA00F79A4F /* DisplayName.png */; };
+		D1F61DD125885BFA00F79A4F /* bg-camera-off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DCA25885BFA00F79A4F /* bg-camera-off@2x.png */; };
+		D1F61DD225885BFA00F79A4F /* bg-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DCB25885BFA00F79A4F /* bg-cell.png */; };
+		D1F61DD325885BFA00F79A4F /* bg-camera-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DCC25885BFA00F79A4F /* bg-camera-off.png */; };
+		D1F61DD425885BFA00F79A4F /* DisplayName@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F61DCD25885BFA00F79A4F /* DisplayName@2x.png */; };
+		D1F61DD725885DBA00F79A4F /* frtc_sdk_bundle.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = D14C874E254D1A7800B4ECE1 /* frtc_sdk_bundle.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1F61DD625885D8C00F79A4F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SRCROOT)/lib";
+			dstSubfolderSpec = 0;
+			files = (
+				D1F61DD725885DBA00F79A4F /* frtc_sdk_bundle.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8E2FA27D2799795D00E7608D /* call_camera_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call_camera_off.png; sourceTree = "<group>"; };
+		8E2FA27F27997D6100E7608D /* local_preview_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = local_preview_off.png; sourceTree = "<group>"; };
+		8E5CCF2D2785F1B000B3C293 /* call_camera_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "call_camera_off@3x.png"; sourceTree = "<group>"; };
+		8E6E355C278C0C8100918BDE /* icon-incall-mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-incall-mute.png"; sourceTree = "<group>"; };
+		8E6E355D278C0C8100918BDE /* icon-incall-mute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-incall-mute@2x.png"; sourceTree = "<group>"; };
+		8E6E355E278C0C8100918BDE /* icon-incall-unmute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-incall-unmute.png"; sourceTree = "<group>"; };
+		8E6E355F278C0C8100918BDE /* icon-incall-unmute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-incall-unmute@2x.png"; sourceTree = "<group>"; };
+		AF444339261C326A00A3483E /* icon-status-mute-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-mute-white@2x.png"; sourceTree = "<group>"; };
+		AF44433A261C326A00A3483E /* icon-status-mute-white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-mute-white@3x.png"; sourceTree = "<group>"; };
+		AF444347261C416D00A3483E /* status-mute@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-mute@3x.png"; sourceTree = "<group>"; };
+		AF444348261C416D00A3483E /* status-mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-mute.png"; sourceTree = "<group>"; };
+		AF444349261C416D00A3483E /* status-mute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status-mute@2x.png"; sourceTree = "<group>"; };
+		AF606F89261451620002CD02 /* icon-status-pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-pin@3x.png"; sourceTree = "<group>"; };
+		AF606F8A261451620002CD02 /* icon-status-pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-status-pin@2x.png"; sourceTree = "<group>"; };
+		D13FD83A26C4CEBF00CE015B /* shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = shader.metal; path = ../../frtc_sdk/frtc_sdk/VideoView/shader.metal; sourceTree = "<group>"; };
+		D14B711E2A43EF7600EC9A66 /* audio_test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio_test.wav; sourceTree = "<group>"; };
+		D14C874E254D1A7800B4ECE1 /* frtc_sdk_bundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = frtc_sdk_bundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14F3F9C25A6EB1C00E05EE9 /* sdk_call_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sdk_call_bg.png; sourceTree = "<group>"; };
+		D1D5B7ED25A7F2F200200B8B /* CallButton-video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CallButton-video.png"; sourceTree = "<group>"; };
+		D1D5B7EE25A7F2F200200B8B /* CallButton-video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CallButton-video@2x.png"; sourceTree = "<group>"; };
+		D1E8BF702B7505D700C4ED88 /* FrtcMeetingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FrtcMeetingViewController.xib; path = ../../frtc_sdk/frtc_sdk/FrtcMeetingViewController/FrtcMeetingViewController.xib; sourceTree = "<group>"; };
+		D1F61DC725885BFA00F79A4F /* DisplayName@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DisplayName@3x.png"; sourceTree = "<group>"; };
+		D1F61DC825885BFA00F79A4F /* bg-cell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cell@2x.png"; sourceTree = "<group>"; };
+		D1F61DC925885BFA00F79A4F /* DisplayName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DisplayName.png; sourceTree = "<group>"; };
+		D1F61DCA25885BFA00F79A4F /* bg-camera-off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-camera-off@2x.png"; sourceTree = "<group>"; };
+		D1F61DCB25885BFA00F79A4F /* bg-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-cell.png"; sourceTree = "<group>"; };
+		D1F61DCC25885BFA00F79A4F /* bg-camera-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-camera-off.png"; sourceTree = "<group>"; };
+		D1F61DCD25885BFA00F79A4F /* DisplayName@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DisplayName@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D14C874B254D1A7800B4ECE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D14C8745254D1A7800B4ECE1 = {
+			isa = PBXGroup;
+			children = (
+				D14C8750254D1A7800B4ECE1 /* frtc_sdk_bundle */,
+				D14C874F254D1A7800B4ECE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D14C874F254D1A7800B4ECE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D14C874E254D1A7800B4ECE1 /* frtc_sdk_bundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D14C8750254D1A7800B4ECE1 /* frtc_sdk_bundle */ = {
+			isa = PBXGroup;
+			children = (
+				D1E8BF702B7505D700C4ED88 /* FrtcMeetingViewController.xib */,
+				D14B711E2A43EF7600EC9A66 /* audio_test.wav */,
+				8E2FA27F27997D6100E7608D /* local_preview_off.png */,
+				8E2FA27D2799795D00E7608D /* call_camera_off.png */,
+				8E6E355C278C0C8100918BDE /* icon-incall-mute.png */,
+				8E6E355D278C0C8100918BDE /* icon-incall-mute@2x.png */,
+				8E6E355E278C0C8100918BDE /* icon-incall-unmute.png */,
+				8E6E355F278C0C8100918BDE /* icon-incall-unmute@2x.png */,
+				8E5CCF2D2785F1B000B3C293 /* call_camera_off@3x.png */,
+				D13FD83A26C4CEBF00CE015B /* shader.metal */,
+				AF444348261C416D00A3483E /* status-mute.png */,
+				AF444349261C416D00A3483E /* status-mute@2x.png */,
+				AF444347261C416D00A3483E /* status-mute@3x.png */,
+				AF444339261C326A00A3483E /* icon-status-mute-white@2x.png */,
+				AF44433A261C326A00A3483E /* icon-status-mute-white@3x.png */,
+				AF606F8A261451620002CD02 /* icon-status-pin@2x.png */,
+				AF606F89261451620002CD02 /* icon-status-pin@3x.png */,
+				D1D5B7ED25A7F2F200200B8B /* CallButton-video.png */,
+				D1D5B7EE25A7F2F200200B8B /* CallButton-video@2x.png */,
+				D14F3F9C25A6EB1C00E05EE9 /* sdk_call_bg.png */,
+				D1F61DCC25885BFA00F79A4F /* bg-camera-off.png */,
+				D1F61DCA25885BFA00F79A4F /* bg-camera-off@2x.png */,
+				D1F61DCB25885BFA00F79A4F /* bg-cell.png */,
+				D1F61DC825885BFA00F79A4F /* bg-cell@2x.png */,
+				D1F61DC925885BFA00F79A4F /* DisplayName.png */,
+				D1F61DCD25885BFA00F79A4F /* DisplayName@2x.png */,
+				D1F61DC725885BFA00F79A4F /* DisplayName@3x.png */,
+			);
+			path = frtc_sdk_bundle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D14C874D254D1A7800B4ECE1 /* frtc_sdk_bundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D14C8754254D1A7800B4ECE1 /* Build configuration list for PBXNativeTarget "frtc_sdk_bundle" */;
+			buildPhases = (
+				D14C874A254D1A7800B4ECE1 /* Sources */,
+				D14C874B254D1A7800B4ECE1 /* Frameworks */,
+				D14C874C254D1A7800B4ECE1 /* Resources */,
+				D1F61DD625885D8C00F79A4F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = frtc_sdk_bundle;
+			productName = frtc_sdk_bundle;
+			productReference = D14C874E254D1A7800B4ECE1 /* frtc_sdk_bundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D14C8746254D1A7800B4ECE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					D14C874D254D1A7800B4ECE1 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = D14C8749254D1A7800B4ECE1 /* Build configuration list for PBXProject "frtc_sdk_bundle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D14C8745254D1A7800B4ECE1;
+			productRefGroup = D14C874F254D1A7800B4ECE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D14C874D254D1A7800B4ECE1 /* frtc_sdk_bundle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D14C874C254D1A7800B4ECE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1F61DCE25885BFA00F79A4F /* DisplayName@3x.png in Resources */,
+				D1D5B7EF25A7F2F200200B8B /* CallButton-video.png in Resources */,
+				D1F61DD125885BFA00F79A4F /* bg-camera-off@2x.png in Resources */,
+				D14F3F9D25A6EB1C00E05EE9 /* sdk_call_bg.png in Resources */,
+				8E2FA27E2799795D00E7608D /* call_camera_off.png in Resources */,
+				D1D5B7F025A7F2F200200B8B /* CallButton-video@2x.png in Resources */,
+				D1F61DCF25885BFA00F79A4F /* bg-cell@2x.png in Resources */,
+				D1F61DD425885BFA00F79A4F /* DisplayName@2x.png in Resources */,
+				D1F61DD025885BFA00F79A4F /* DisplayName.png in Resources */,
+				AF44434B261C416D00A3483E /* status-mute.png in Resources */,
+				D1F61DD225885BFA00F79A4F /* bg-cell.png in Resources */,
+				8E6E3561278C0C8200918BDE /* icon-incall-mute@2x.png in Resources */,
+				AF44434C261C416D00A3483E /* status-mute@2x.png in Resources */,
+				8E6E3562278C0C8200918BDE /* icon-incall-unmute.png in Resources */,
+				8E6E3563278C0C8200918BDE /* icon-incall-unmute@2x.png in Resources */,
+				8E6E3560278C0C8200918BDE /* icon-incall-mute.png in Resources */,
+				8E5CCF2E2785F1B000B3C293 /* call_camera_off@3x.png in Resources */,
+				AF606F8B261451620002CD02 /* icon-status-pin@3x.png in Resources */,
+				AF606F8C261451620002CD02 /* icon-status-pin@2x.png in Resources */,
+				8E2FA28027997D6100E7608D /* local_preview_off.png in Resources */,
+				AF44434A261C416D00A3483E /* status-mute@3x.png in Resources */,
+				AF44433C261C326A00A3483E /* icon-status-mute-white@3x.png in Resources */,
+				D14B711F2A43EF7600EC9A66 /* audio_test.wav in Resources */,
+				AF44433B261C326A00A3483E /* icon-status-mute-white@2x.png in Resources */,
+				D1F61DD325885BFA00F79A4F /* bg-camera-off.png in Resources */,
+				D1E8BF712B7505D700C4ED88 /* FrtcMeetingViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D14C874A254D1A7800B4ECE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D13FD83B26C4CEBF00CE015B /* shader.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D14C8752254D1A7800B4ECE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D14C8753254D1A7800B4ECE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D14C8755254D1A7800B4ECE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frtc.bundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		D14C8756254D1A7800B4ECE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frtc.bundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D14C8749254D1A7800B4ECE1 /* Build configuration list for PBXProject "frtc_sdk_bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14C8752254D1A7800B4ECE1 /* Debug */,
+				D14C8753254D1A7800B4ECE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D14C8754254D1A7800B4ECE1 /* Build configuration list for PBXNativeTarget "frtc_sdk_bundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D14C8755254D1A7800B4ECE1 /* Debug */,
+				D14C8756254D1A7800B4ECE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D14C8746254D1A7800B4ECE1 /* Project object */;
+}

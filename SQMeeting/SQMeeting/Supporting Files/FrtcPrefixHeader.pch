@@ -1,0 +1,10 @@
+#ifndef FRTCPrefixHeader_pch
+#define FRTCPrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "FrtcMacros.h"
+
+#endif
+
+#endif /* FrtcPrefixHeader_pch */
