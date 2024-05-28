@@ -138,7 +138,6 @@
     
     self.infoView.titleTextField.stringValue = [NSString stringWithFormat:@"%@ %@", model.owner_name, NSLocalizedString(@"FM_INVITE_PEOPLE", @"Invite you to a SQ Meeting CE  meeting")];
     
-    //self.infoView.titleTextField.stringValue = [NSString stringWithFormat:@"%@ %@", model.clientName, NSLocalizedString(@"FM_INVITE_PEOPLE", @"Invite you to a SQ Meeting CE  meeting")];
     self.infoView.themeTextField.stringValue = [NSString stringWithFormat:@"%@：%@", NSLocalizedString(@"FM_MEETING_OBJECT", @"Meeting Topic"), model.meeting_name];
     self.infoView.meetingNumberTextField.stringValue = [NSString stringWithFormat:@"%@：%@", NSLocalizedString(@"FM_MEETING_NUMBER", @"Meeting ID"), model.meeting_number];
     self.infoView.meetingBeginTimeTextField.stringValue = [NSString stringWithFormat:@"%@：%@", NSLocalizedString(@"FM_MEETING_START_TIME", @"Start Time"),[self dateTimeString:model.schedule_start_time]];
@@ -207,19 +206,17 @@
             NSArray *sortedArray= [self.model.recurrenceDaysOfMonth sortedArrayUsingSelector:@selector(compare:)];
             NSString *str = [NSString stringWithFormat:@"%@", sortedArray[0]];
             
-           // NSString *str = self.model.recurrenceDaysOfMonth[0];
             for(int i = 1; i < sortedArray.count; i++) {
                 str = [NSString stringWithFormat:@"%@,%@", str,sortedArray[i]];
             }
             if([model.recurrenceInterval integerValue] == 1) {
                 recurrenceString = [NSString stringWithFormat:NSLocalizedString(@"FM_MEETING_RE_EVERY_ONE_MONTH", @"Every month on day(%@)"),str];
-                
-                
             } else {
                 recurrenceString = [NSString stringWithFormat:NSLocalizedString(@"FM_MEETING_RE_EVERY_MORE_MONTH", @"Every %@ month on day(%@)"),model.recurrenceInterval,str];
             }
         }
-        self.infoView.recurrenceTextField.stringValue = [NSString stringWithFormat:@"%@：%@ %@ %@", NSLocalizedString(@"FM_MEETING_RECURRENCE_RECURRENT", @"Recurrence"), str ,timeHour, recurrenceString];
+        
+        self.infoView.recurrenceTextField.stringValue = [NSString stringWithFormat:@"%@：%@ %@", NSLocalizedString(@"FM_MEETING_RECURRENCE_RECURRENT", @"Recurrence"), str , recurrenceString];
     }
 }
 
