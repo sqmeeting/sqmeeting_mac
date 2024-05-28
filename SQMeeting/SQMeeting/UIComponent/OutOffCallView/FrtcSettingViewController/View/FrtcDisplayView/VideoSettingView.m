@@ -131,20 +131,6 @@
         make.width.mas_greaterThanOrEqualTo(286);
         make.height.mas_greaterThanOrEqualTo(32);
      }];
-    
-    [self.gpuSpeedButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(23);
-        make.top.mas_equalTo(self.videoLayoutCombox.mas_bottom).offset(20);
-        make.width.mas_greaterThanOrEqualTo(84);
-        make.height.mas_greaterThanOrEqualTo(20);
-     }];
-    
-    [self.descriptionTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.gpuSpeedButton.mas_right).offset(8);
-        make.centerY.mas_equalTo(self.gpuSpeedButton.mas_centerY);
-        make.width.mas_equalTo(250);
-        make.height.mas_greaterThanOrEqualTo(0);
-     }];
 }
 
 - (AVCaptureDevice *)getDeviceByName:(NSString *)name {

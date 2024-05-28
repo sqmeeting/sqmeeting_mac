@@ -112,7 +112,7 @@ static FrtcBaseImplement *baseImpleSingleton = nil;
     NSDate *detailDate = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     if ([self isTodayWithTimeString:detailDate]) {
-        [dateFormatter setDateFormat:@"a HH:mm"];
+        [dateFormatter setDateFormat:@"HH:mm"];
     } else {
         [dateFormatter setDateFormat:@"yyyy-MM-dd EE HH:mm"];
     }

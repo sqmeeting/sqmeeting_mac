@@ -423,8 +423,9 @@
         _meetingLeadTextField = [self internalTextField];
         _meetingLeadTextField.lineBreakMode = NSLineBreakByTruncatingTail;
         _meetingLeadTextField.maximumNumberOfLines = 1;
+        _meetingLeadTextField.alignment = NSTextAlignmentRight;
         _meetingLeadTextField.stringValue = self.detailMeetingInfoModel.ownerName == nil ? self.detailMeetingInfoModel.meetingName : self.detailMeetingInfoModel.ownerName;
-        _meetingLeadTextField.alignment = NSTextAlignmentLeft;
+        //_meetingLeadTextField.alignment = NSTextAlignmentLeft;
         [self.view addSubview:_meetingLeadTextField];
     }
     

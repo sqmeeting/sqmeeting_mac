@@ -2340,16 +2340,18 @@
         NSDate *finalDate = [calendar dateByAddingUnit:NSCalendarUnitMinute value:roundingValue toDate:nextDate options:0];
 
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        
+        if([self isEnglish]) {
+            [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        }
         [formatter setDateFormat:@"HH:mm"];
         NSString *dateString = [formatter stringFromDate:finalDate];
         NSLog(@"endDetailTextField: %@", dateString);
         
         _endDetailTextField.stringValue = dateString;
         
-        
         NSString *beginTimeString = [NSString stringWithFormat:@"%@:%@",self.beginTimeTextField.stringValue, self.beginDetailTextField.stringValue];
-        [formatter setDateFormat:@"yyyy-MM-dd EE:HH:mm"];
+        [formatter setDateFormat:@"yyyy-MM-dd EE:hh:mm"];
         NSDate *date = [formatter dateFromString:beginTimeString];
         nextDate = [[NSDate alloc] initWithTimeInterval:30 * 60 sinceDate:date];
         dateString = [formatter stringFromDate:nextDate];
