@@ -150,9 +150,16 @@
         self.infoView.meetingUrlTextField.stringValue = model.meeting_url;
     }
     
-    if([model.meeting_url isEqualToString:@""] || model.meeting_url == nil) {
-        self.infoView.meetingUrlTextField.hidden = YES;
-        self.infoView.meetingUrlTextFieldTips.hidden = YES;
+    if([model.meeting_type isEqualToString:@"recurrence"]) {
+        if([model.groupMeetingUrl isEqualToString:@""] || model.groupMeetingUrl == nil) {
+            self.infoView.meetingUrlTextField.hidden = YES;
+            self.infoView.meetingUrlTextFieldTips.hidden = YES;
+        }
+    } else {
+        if([model.meeting_url isEqualToString:@""] || model.meeting_url == nil) {
+            self.infoView.meetingUrlTextField.hidden = YES;
+            self.infoView.meetingUrlTextFieldTips.hidden = YES;
+        }
     }
     
     if([[self dateTimeString:model.schedule_end_time] isEqualToString:@"1970-01-01 08:00"] && [[self dateTimeString:model.schedule_start_time] isEqualToString:@"1970-01-01 08:00"]) {

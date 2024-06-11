@@ -1678,11 +1678,12 @@
         
         MeetingDetailModel *detailModel = self.recentCallList[row];
         NSString *startTime = [[FrtcBaseImplement baseImpleSingleton] dateStringWithTimeString:detailModel.meetingStartTime];
-        NSString *endTime   = [[FrtcBaseImplement baseImpleSingleton] dateStringWithTimeString:detailModel.meetingEndTime];
+        //NSString *endTime   = [[FrtcBaseImplement baseImpleSingleton] dateStringWithTimeString:detailModel.meetingEndTime];
 
         ((FrtcHistoryCallTableViewCell *)cell).meetingNameTextField.stringValue   = detailModel.meetingName ? detailModel.meetingName : @"";
         ((FrtcHistoryCallTableViewCell *)cell).numberTextField.stringValue        = detailModel.meetingNumber ? detailModel.meetingNumber : @"";
-        ((FrtcHistoryCallTableViewCell *)cell).timeTextField.stringValue          = [NSString stringWithFormat:@"%@ - %@", startTime, endTime];
+       // ((FrtcHistoryCallTableViewCell *)cell).timeTextField.stringValue          = [NSString stringWithFormat:@"%@ - %@", startTime, endTime];
+        ((FrtcHistoryCallTableViewCell *)cell).timeTextField.stringValue          = [NSString stringWithFormat:@"%@", startTime];
     }
     
     return cell;

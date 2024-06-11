@@ -310,6 +310,18 @@
             make.height.mas_equalTo(36);
          }];
         
+        NSFont *font1             = [NSFont systemFontOfSize:14.0f];
+        
+        NSDictionary *attributes1 = @{ NSFontAttributeName:font1 };
+        CGSize size1              = [NSLocalizedString(@"FM_MEETING_REMINDER_CALENDAR", @"Save to System Calendar") sizeWithAttributes:attributes1];
+        
+        [self.saveToCalendarButton mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.copyButton.mas_bottom).offset(16);
+            make.centerX.mas_equalTo(self.view.mas_centerX);
+            make.width.mas_equalTo(size1.width + 30);
+            make.height.mas_equalTo(size1.height + 10);
+        }];
+        
         return;
     } 
     
@@ -338,9 +350,7 @@
         NSFont *font1             = [NSFont systemFontOfSize:14.0f];
         NSDictionary *attributes1 = @{ NSFontAttributeName:font1 };
         CGSize size1              = [NSLocalizedString(@"FM_MEETING_REMINDER_CALENDAR", @"Save to System Calendar") sizeWithAttributes:attributes1];
-        //CGSize size1              = [@"Your Text okYour Text ok" sizeWithAttributes:attributes1];
-        //CGSize size1              = [@"Your Text" sizeWithAttributes:attributes1];
-        
+     
         [self.saveToCalendarButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.removeButton.mas_bottom).offset(16);
             make.centerX.mas_equalTo(self.view.mas_centerX);
@@ -356,18 +366,9 @@
             make.height.mas_equalTo(36);
         }];
         
-        //    [self.deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        //        make.top.mas_equalTo(self.cancelButton.mas_bottom).offset(16);
-        //        make.centerX.mas_equalTo(self.view.mas_centerX);
-        //        make.width.mas_equalTo(332);
-        //        make.height.mas_equalTo(36);
-        //     }];
-        
         NSFont *font1             = [NSFont systemFontOfSize:14.0f];
         NSDictionary *attributes1 = @{ NSFontAttributeName:font1 };
         CGSize size1              = [NSLocalizedString(@"FM_MEETING_REMINDER_CALENDAR", @"Save to System Calendar") sizeWithAttributes:attributes1];
-        //CGSize size1              = [@"Your Text okYour Text ok" sizeWithAttributes:attributes1];
-        //CGSize size1              = [@"Your Text" sizeWithAttributes:attributes1];
         
         [self.saveToCalendarButton mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.cancelButton.mas_bottom).offset(16);
