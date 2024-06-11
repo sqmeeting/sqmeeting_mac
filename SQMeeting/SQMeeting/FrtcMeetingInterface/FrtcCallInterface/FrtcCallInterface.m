@@ -4,7 +4,6 @@
 #import "FrtcUserDefault.h"
 #import "FrtcBaseImplement.h"
 #import "FrtcVerticalCenterTextFieldCell.h"
-#import "MeetingInformationView.h"
 #import "MeetingMessageModel.h"
 #import "FrtcTipsView.h"
 #import "FrtcContentViewController.h"
@@ -76,6 +75,9 @@ static FrtcCallInterface *singletonFrtcCall = nil;
 
 @property (nonatomic, assign) BOOL wantToSwitchGridModeWhenReceivingContent;
 
+
+@property (nonatomic, copy) NSString *overlayMessage;
+
 @end
 
 
@@ -132,6 +134,12 @@ static FrtcCallInterface *singletonFrtcCall = nil;
 }
 
 - (void)onMeetingMessage:(NSString *)message {
+    if(self.windowController.contentViewController == nil) {
+            self.overlayMessage = message;
+            
+            return;
+    }
+    
     [self.windowController handleMeetingOverlayMessage:message];
 }
 
@@ -614,6 +622,12 @@ static FrtcCallInterface *singletonFrtcCall = nil;
                 
                 [strongSelf.windowController resetOverLay];
                 [strongSelf.contentControlToolBarResponder updatecontentControlToolBarInCallModel:model];
+                
+                if(strongSelf.overlayMessage != nil) {
+                    [strongSelf.windowController handleMeetingOverlayMessage:strongSelf.overlayMessage];
+                    strongSelf.overlayMessage = nil;
+                }
+                
                 if ([strongSelf isEnglish]) {
                     strongSelf.windowController.window.title = @"SQ Meeting CE ";
                 } else {
