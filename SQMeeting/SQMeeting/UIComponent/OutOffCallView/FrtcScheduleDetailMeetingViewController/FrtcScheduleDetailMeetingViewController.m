@@ -155,7 +155,9 @@
             make.height.mas_greaterThanOrEqualTo(0);
          }];
     } else {
-        
+        self.recurrenceView.hidden = YES;
+        self.recurrenceIntervalView.hidden = YES;
+
         [self.titleTextField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.view.mas_top).offset(60);
             make.centerX.mas_equalTo(self.view.mas_centerX);
@@ -1103,83 +1105,9 @@
     // Create an event store object
     EKEventStore *eventStore = [[EKEventStore alloc] init];
 
-    // Request access to the user's calendar
-   /* [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-        if (granted) {
-            // Create a new calendar event object
-            EKEvent *event = [EKEvent eventWithEventStore:eventStore];
-
-            // Set the event title and message
-            ScheduleModel *model = self.scheduleModel;
-            event.title = [NSString stringWithFormat:@"%@", model.meeting_name];;
-
-            event.location = model.meeting_url;
-            event.notes = [self generateScheduleMeetingInfoString];
-            
-            // Set the event start and end time
-            NSDate *startDate = [[FrtcBaseImplement baseImpleSingleton] DateConvertFromDateAndTimeString:model.schedule_start_time];
-            NSDate *endDate = [[FrtcBaseImplement baseImpleSingleton] DateConvertFromDateAndTimeString:model.schedule_end_time];
-            event.startDate = startDate;
-            event.endDate = endDate;
-            
-            //set alert message "Alert 5 minutes before start"
-            [event addAlarm:[EKAlarm alarmWithRelativeOffset:-5.0f * 60.0f]];
-            
-            
-            // Save the event to the user's calendar
-            [event setCalendar:[eventStore defaultCalendarForNewEvents]];
-            NSError *saveError = nil;
-            [eventStore saveEvent:event span:EKSpanThisEvent error:&saveError];
-
-            if (nil == saveError) {
-                NSLog(@"[%s][iCal]: Success saving event: %@", __func__, saveError);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showReminderView:NSLocalizedString(@"FM_MEETING_REMINDER_CALENDAR_ADDOK", @"Saved successfully")];
-                });
-                
-                // Launch Calendar app to show the event
-                //NSURL *eventURL = [NSURL URLWithString:event.eventIdentifier];
-                //[[NSWorkspace sharedWorkspace] openURL:eventURL];
-                
-                // Launch Calendar app
-                // Launch Calendar app and display the event
-//                NSString *eventIdentifier = event.eventIdentifier;
-//                NSString *scriptSource = [NSString stringWithFormat:@"tell application \"Calendar\"\nactivate\ndo shell script \"open x-apple-calendar://?eventId=%@\"\nend tell", eventIdentifier];
-//                NSAppleScript *script = [[NSAppleScript alloc] initWithSource:scriptSource];
-//                NSDictionary *errorInfo = nil;
-//                if (![script executeAndReturnError:&errorInfo]) {
-//                    NSLog(@"Error executing AppleScript: %@", errorInfo);
-//                }
-                
-            } else {
-                NSLog(@"[%s][iCal]: Error saving event: %@", __func__, saveError);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showReminderView:NSLocalizedString(@"FM_MEETING_REMINDER_CALENDAR_ADD_FAILED", @"Save failed")];
-                });
-            }
-        } else {
-            NSLog(@"[%s][iCal]: Error: Access denied: %@", __func__, error);
-
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // If permission is not granted, display an alert message
-                NSAlert *alert = [[NSAlert alloc] init];
-                alert.messageText = @"Calendar access required";
-                alert.informativeText = @"Your app needs access to your calendar to save events. Please grant permission in System Preferences > Security & Privacy > Privacy.";
-                [alert addButtonWithTitle:@"OK"];
-                [alert addButtonWithTitle:@"Open Security & Privacy"];
-                NSModalResponse response = [alert runModal];
-                if (response == NSAlertSecondButtonReturn) {
-                    NSURL *securityURL = [NSURL URLWithString:@"x-apple.systempreferences:com.apple.preference.security?Privacy_Calendars"];
-                    [[NSWorkspace sharedWorkspace] openURL:securityURL];
-                }
-            });
-            
-        }
-    }];*/
-    
     if (@available(macOS 14.0, *)) {
 #if __MAC_OS_X_VERSION_MAX_ALLOWED >= 140000
-        [eventStore requestFullAccessToRemindersWithCompletion:^(BOOL granted, NSError *error) {
+        [eventStore requestWriteOnlyAccessToEventsWithCompletion:^(BOOL granted, NSError *error) {
             if (granted) {
                 // Create a new calendar event object
                 EKEvent *event = [EKEvent eventWithEventStore:eventStore];
@@ -1200,7 +1128,40 @@
                 //set alert message "Alert 5 minutes before start"
                 [event addAlarm:[EKAlarm alarmWithRelativeOffset:-5.0f * 60.0f]];
                 
-                
+                if([model.meeting_type isEqualToString:@"recurrence"]) {
+                    EKRecurrenceRule *currentRule;
+                    
+                    NSInteger interval = [model.recurrenceInterval integerValue];
+                    
+                    NSDate *recurrenceEndDate = [[FrtcBaseImplement baseImpleSingleton] DateConvertFromDateAndTimeString:model.recurrenceEndDay];
+                    
+                    if([model.recurrence_type isEqualToString:@"WEEKLY"]) {
+                        NSMutableArray *weekArray  = [NSMutableArray array];
+                        
+                        for(NSNumber *number in model.recurrenceDaysOfWeek) {
+                            EKWeekday weekday = ((EKWeekday)[number integerValue]);
+                            EKRecurrenceDayOfWeek *day = [EKRecurrenceDayOfWeek dayOfWeek:weekday];
+                            [weekArray addObject:day];
+                        }
+                        NSArray *week = [[NSArray alloc] initWithArray:weekArray];
+                        
+                        currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyWeekly interval:interval daysOfTheWeek:week daysOfTheMonth:nil monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                    } else if([model.recurrence_type isEqualToString:@"DAILY"]) {
+                        currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyDaily interval:interval daysOfTheWeek:nil daysOfTheMonth:nil monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                    } else if([model.recurrence_type isEqualToString:@"MONTHLY"]) {
+                        NSMutableArray *monthlyDayArray  = [NSMutableArray array];
+                        
+                        for(NSNumber *number in model.recurrenceDaysOfMonth) {
+                            [monthlyDayArray addObject:number];
+                        }
+                        NSArray *monthlyDay = [[NSArray alloc] initWithArray:monthlyDayArray];
+                        
+                        currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyMonthly interval:interval daysOfTheWeek:nil daysOfTheMonth:monthlyDay monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                    }
+                    
+                    event.recurrenceRules = @[currentRule];
+                }
+
                 // Save the event to the user's calendar
                 [event setCalendar:[eventStore defaultCalendarForNewEvents]];
                 NSError *saveError = nil;
@@ -1274,6 +1235,39 @@
                  //set alert message "Alert 5 minutes before start"
                  [event addAlarm:[EKAlarm alarmWithRelativeOffset:-5.0f * 60.0f]];
                  
+                 if([model.meeting_type isEqualToString:@"recurrence"]) {
+                     EKRecurrenceRule *currentRule;
+                     
+                     NSInteger interval = [model.recurrenceInterval integerValue];
+                     
+                     NSDate *recurrenceEndDate = [[FrtcBaseImplement baseImpleSingleton] DateConvertFromDateAndTimeString:model.recurrenceEndDay];
+                     
+                     if([model.recurrence_type isEqualToString:@"WEEKLY"]) {
+                         NSMutableArray *weekArray  = [NSMutableArray array];
+                         
+                         for(NSNumber *number in model.recurrenceDaysOfWeek) {
+                             EKWeekday weekday = ((EKWeekday)[number integerValue]);
+                             EKRecurrenceDayOfWeek *day = [EKRecurrenceDayOfWeek dayOfWeek:weekday];
+                             [weekArray addObject:day];
+                         }
+                         NSArray *week = [[NSArray alloc] initWithArray:weekArray];
+                         
+                         currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyWeekly interval:interval daysOfTheWeek:week daysOfTheMonth:nil monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                     } else if([model.recurrence_type isEqualToString:@"DAILY"]) {
+                         currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyDaily interval:interval daysOfTheWeek:nil daysOfTheMonth:nil monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                     } else if([model.recurrence_type isEqualToString:@"MONTHLY"]) {
+                         NSMutableArray *monthlyDayArray  = [NSMutableArray array];
+                         
+                         for(NSNumber *number in model.recurrenceDaysOfMonth) {
+                             [monthlyDayArray addObject:number];
+                         }
+                         NSArray *monthlyDay = [[NSArray alloc] initWithArray:monthlyDayArray];
+                         
+                         currentRule = [[EKRecurrenceRule alloc] initRecurrenceWithFrequency:EKRecurrenceFrequencyMonthly interval:interval daysOfTheWeek:nil daysOfTheMonth:monthlyDay monthsOfTheYear:nil weeksOfTheYear:nil daysOfTheYear:nil setPositions:nil end:[EKRecurrenceEnd recurrenceEndWithEndDate:recurrenceEndDate]];
+                     }
+                     
+                     event.recurrenceRules = @[currentRule];
+                 }
                  
                  // Save the event to the user's calendar
                  [event setCalendar:[eventStore defaultCalendarForNewEvents]];
