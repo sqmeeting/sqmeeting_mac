@@ -249,12 +249,36 @@
 //            }
 //        }
         
-        NSString *str = self.groupModel.recurrenceDaysOfWeek[0];
         
-        NSLog(@"-------print the value--------");
+        //NSString *str = self.groupModel.recurrenceDaysOfWeek[0];
         
-        for(int i = 1; i < self.groupModel.recurrenceDaysOfWeek.count; i++) {
-            str = [NSString stringWithFormat:@"%@,%@", str, self.groupModel.recurrenceDaysOfWeek[i]];
+        //NSLog(@"-------print the value--------");
+        NSArray *sortArray;
+        NSMutableArray *array = [NSMutableArray array];
+
+        for(NSNumber *number in self.groupModel.recurrenceDaysOfWeek) {
+            NSInteger day = 0;
+            day = [number integerValue] - 1;
+            
+            if(day == 0) {
+                day = 7;
+            }
+            [array addObject:[NSNumber numberWithInteger:day]];
+        }
+
+        sortArray = [array sortedArrayUsingSelector:@selector(compare:)];
+        
+        NSInteger weekDay = 0;
+        weekDay = [sortArray[0] integerValue];
+
+        NSString *str = [NSString stringWithFormat:@"%ld", weekDay];
+        
+        for(int i = 1; i < sortArray.count; i++) {
+            NSInteger weekDay = 0;
+            weekDay = [sortArray[i] integerValue];
+                        
+            str = [NSString stringWithFormat:@"%@,%ld", str, weekDay];
+
         }
         if([self.groupModel.recurrenceInterval integerValue] == 1) {
             self.recurrenceIntervalTextField.stringValue = NSLocalizedString(@"FM_MEETING_RE_EVERY_WEEK", @"Every Week");

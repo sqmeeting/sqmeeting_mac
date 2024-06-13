@@ -407,7 +407,7 @@ withrecurrenceDaysOfMonth:(NSMutableArray *)recurrenceDaysOfMonth
 
         completionHandler(shceduleMoel);
         } getScheduledFailure:^(NSError * _Nonnull error) {
-            NSLog(@"FAILURE");
+            getScheduledFailure(error);
     }];
 }
 
