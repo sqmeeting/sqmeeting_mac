@@ -162,7 +162,11 @@ requestCompletionHandler:(RequestCompletionHandler)completionHandler
     NSString *serverAddress;
     BOOL isUrlCall = [[SDKUserDefault sharedSDKUserDefault] sdkBoolObjectForKey:SKD_IF_URL_CALL];
     if(isUrlCall) {
-        serverAddress = [[SDKUserDefault sharedSDKUserDefault] sdkObjectForKey:SKD_URL_VALUE];
+        if([uri isEqualToString:@"/api/v1/meeting_schedule"]) {
+            serverAddress = [[SDKUserDefault sharedSDKUserDefault] sdkObjectForKey:SKD_SERVER_ADDRESS];
+        } else {
+            serverAddress = [[SDKUserDefault sharedSDKUserDefault] sdkObjectForKey:SKD_URL_VALUE];
+        }
     } else {
         serverAddress = [[SDKUserDefault sharedSDKUserDefault] sdkObjectForKey:SKD_SERVER_ADDRESS];
     }
