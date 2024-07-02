@@ -794,15 +794,17 @@
 }
 
 - (NSString *)startDayTime {
-    //return [self dayTimeWithString:self.beginCanlanderView.timeTextField.stringValue];
-    NSString *str = [NSString stringWithFormat:@"%@:%@", self.beginCanlanderView.timeTextField.stringValue, @"00:00:00"];
+    //return [self dayTimeWithString:self.beginCanlanderView.timeTextField.stringValue];self.beginTimeTextField.stringValue
+   // NSString *str = [NSString stringWithFormat:@"%@:%@", self.beginCanlanderView.timeTextField.stringValue, @"00:00:00"];
     //return [self dayTimeWithString:self.beginTimeTextField.stringValue];
+    NSString *str = [NSString stringWithFormat:@"%@:%@", self.beginTimeTextField.stringValue, @"00:00:00"];
     return [self dayTimeWithString:str];
 }
 
 - (NSString *)endDayTime {
     NSString *str = [NSString stringWithFormat:@"%@:%@", self.endCanlanderView.timeTextField.stringValue, @"23:59:59"];
     //return [self dayTimeWithString:self.endCanlanderView.timeTextField.stringValue];
+    //NSString *str = [NSString stringWithFormat:@"%@:%@", self.endTimeTextField.stringValue, @"23:59:59"];
     return [self dayTimeWithString:str];
 }
 
@@ -1160,7 +1162,7 @@
                     }
                 }
                 
-                NSDate *currentDate = [[NSDate alloc] init];
+                /*NSDate *currentDate = [[NSDate alloc] init];
                 NSCalendar *calendar = [NSCalendar currentCalendar];
                 NSDateComponents *components = [calendar components:NSCalendarUnitWeekday fromDate:currentDate];
                 NSInteger weekday = components.weekday;
@@ -1176,7 +1178,7 @@
                     } else {
                         [view setCurrentColor:NO];
                     }
-                }
+                }*/
                 
                 [self.endReTextLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(24);
@@ -1442,6 +1444,7 @@
         NSInteger interval = 1;
         if([self.recurrenceType isEqualToString:@"DAILY"]) {
             interval = 1 * 6;
+            interval = self.recurrenceInterval * 6;
             NSDate *nextDate = [[NSDate alloc] initWithTimeInterval:interval * 24 * 60 * 60 sinceDate:date];
             NSString *dateString = [self dateToString:nextDate];
             NSArray *array = [dateString componentsSeparatedByString:@":"];
@@ -2343,15 +2346,23 @@
         
         if([self isEnglish]) {
             [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+        } else {
+            formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_Hans_CN"];
         }
-        [formatter setDateFormat:@"HH:mm"];
+        
+        formatter.calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierISO8601];
+        NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
+        [formatter setTimeZone:timeZone];
+        
+        [formatter setDateFormat:@"hh:mm"];
         NSString *dateString = [formatter stringFromDate:finalDate];
         NSLog(@"endDetailTextField: %@", dateString);
         
         _endDetailTextField.stringValue = dateString;
         
         NSString *beginTimeString = [NSString stringWithFormat:@"%@:%@",self.beginTimeTextField.stringValue, self.beginDetailTextField.stringValue];
-        [formatter setDateFormat:@"yyyy-MM-dd EE:hh:mm"];
+                
+        [formatter setDateFormat:@"yyyy-MM-dd EE:HH:mm"];
         NSDate *date = [formatter dateFromString:beginTimeString];
         nextDate = [[NSDate alloc] initWithTimeInterval:30 * 60 sinceDate:date];
         dateString = [formatter stringFromDate:nextDate];

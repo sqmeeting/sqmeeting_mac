@@ -71,7 +71,6 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyy-MM-dd EE";
         NSString *dateString = [formatter stringFromDate:theDate];
-        NSDate *datenow = [NSDate date];//现在时间,您可以输出来看下是什么格式
         _timeTextField.stringValue = dateString;
         [self addSubview:_timeTextField];
     }
