@@ -211,7 +211,7 @@ requestCompletionHandler:(RequestCompletionHandler)completionHandler
 
 #pragma mark --HTTP HEADER--
 - (NSDictionary *)HEADER {
-    return @{@"User-Agent":@"FrtcMeeting/3.3.0 mac"};
+    return @{@"User-Agent":@"FrtcMeeting/3.4.0 mac"};
 }
 
 @end
