@@ -4,6 +4,7 @@
 #import "FrtcCall.h"
 #import "NumberLimiteFormatter.h"
 #import "FrtcBorderTextField.h"
+#include <sys/sysctl.h>
 
 @interface UploadingLogView () <NSTextFieldDelegate, UploadingLogWindowDelegate>
 
@@ -142,13 +143,41 @@
         issue = @"bug";
     }
     
-    NSDictionary *mateData = @{@"version":[[FrtcCall sharedFrtcCall] frtcGetVersion ],@"platform":@"mac",@"os":@"macos 13.2.1",@"device":@"mac",@"issue":issue};
+    NSDictionary *mateData = @{@"version":[self softwareVersion],@"platform":@"mac",@"os":[self systemVersion],@"device":[self modelName],@"issue":issue};
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mateData options:0 error:0];
     NSString *loadInfo = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     
     [uploadLogWindow upLoadLogProcess:loadInfo];
 }
+
+- (NSString *)modelName {
+    size_t size;
+    sysctlbyname("hw.model", NULL, &size, NULL, 0);
+    char* model = (char *)malloc(size);
+    sysctlbyname("hw.model", model, &size, NULL, 0);
+    NSString* macModel = [[NSString alloc] initWithBytesNoCopy:model length:size encoding:NSUTF8StringEncoding freeWhenDone:YES];
+    
+    return macModel;
+}
+
+- (NSString *)systemVersion {
+    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+    
+    NSOperatingSystemVersion osVersion = [processInfo operatingSystemVersion];
+    NSString *systemVersion = [NSString stringWithFormat:@"%ld.%ld.%ld",osVersion.majorVersion, osVersion.minorVersion, osVersion.patchVersion];
+    
+    return systemVersion;
+}
+
+- (NSString *)softwareVersion {
+    NSString *majorNumber = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"] ?: [[NSBundle mainBundle] infoDictionary][(__bridge NSString *)kCFBundleVersionKey];
+    NSString *buildNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString *softwareVersion = [NSString stringWithFormat:@"%@.%@", majorNumber, buildNumber];
+    
+    return softwareVersion;
+}
+
 
 #pragma mark --lazy load function--
 - (NSImageView *)imageView {
